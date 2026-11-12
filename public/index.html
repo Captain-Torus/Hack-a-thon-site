@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentGate Browser — The AI-Translated Web Browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       SCREEN 1: SIGN-IN SCREEN
+       ======================================================================== -->
+  <div id="signInScreen" style="min-height: 100vh; display: none; align-items: center; justify-content: center; padding: 24px;">
+    <div class="modal-card" style="max-width: 410px;">
+      <div style="padding: 28px 28px 20px 28px; text-align: center; border-bottom: 1px solid var(--border-default);">
+        <h1 style="font-size: 20px; font-weight: 600; margin-bottom: 6px;">Sign in to AgentGate Browser</h1>
+        <p style="font-size: 13px; color: var(--text-secondary);">
+          The web browser where every website is automatically translated for AI.
+        </p>
+      </div>
+      <div class="modal-body" style="padding: 24px 28px;">
+        <button class="oauth-btn" onclick="signIn('google')">Continue with Google</button>
+        <button class="oauth-btn" onclick="signIn('github')">Continue with GitHub</button>
+        <input type="text" id="loginNameInput" class="form-input" placeholder="Your Name" value="Byron" />
+        <button class="btn-primary" style="width: 100%; justify-content: center; padding: 10px;" onclick="signIn('email')">
+          Launch Browser (Founder Infinite Credits)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SCREEN 2: THE AGENTGATE AI BROWSER
+       ======================================================================== -->
+  <div id="browserShell" style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- TOP BROWSER CHROME (TABS + ADDRESS/SEARCH BAR + BOOKMARKS) -->
+    <header class="browser-chrome">
+      <!-- Row 1: Browser Tabs + Right Controls -->
+      <div class="browser-tab-strip">
+        <div class="tabs-scroll" id="tabsStripContainer">
+          <!-- Populated dynamically -->
+        </div>
+
+        <div class="chrome-right-controls">
+          <!-- PERMANENT DEFAULT AI PILL (Always Connected Across All Tabs!) -->
+          <div class="wallet-pill" onclick="openPermanentAiModal()" style="border-color: var(--emerald-border); background: var(--emerald-subtle);" title="Click to view or change your Permanent Default AI">
+            <span class="wallet-dot"></span>
+            <span style="font-size: 11.5px; font-weight: 600; color: var(--emerald-bright);" id="permanentAiBadgeText">Permanent AI: Antigravity AI</span>
+          </div>
+
+          <button class="btn-secondary" onclick="openCombinedTabsModal()" title="Combine all open browser tabs into 1 Takeout Bag for your AI">
+            Combine All Tabs
+          </button>
+
+          <div class="wallet-pill" onclick="openCreditsModal()">
+            <span class="wallet-dot"></span>
+            <span class="wallet-amount" id="walletCreditsDisplay">∞ Infinite</span>
+            <span style="color: var(--text-secondary);">Credits</span>
+          </div>
+
+          <button class="btn-secondary" onclick="signOut()" style="padding: 4px 9px;">
+            <span id="userNameDisplay">Byron</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Row 2: Back / Forward / Refresh + Address & Search Bar + View Mode Switcher -->
+      <div class="browser-omni-row">
+        <button class="nav-icon-btn" id="btnBack" onclick="navigateHistory('back')" title="Back">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="nav-icon-btn" id="btnForward" onclick="navigateHistory('forward')" title="Forward">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <button class="nav-icon-btn" onclick="refreshActiveTab()" title="Refresh & Re-Translate Page">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+        </button>
+
+        <!-- Address / Search Input -->
+        <form class="omni-input-wrap" onsubmit="onAddressBarSubmit(event)">
+          <span class="omni-badge" id="omniCompressionBadge">HEADLESS CHROMIUM</span>
+          <input
+            type="text"
+            id="addressBarInput"
+            class="omni-input"
+            placeholder="Type any website URL (books.toscrape.com) OR search anything (spider man, black holes)..."
+          />
+          <button type="submit" class="omni-go-btn" id="omniGoBtn">Translate & Go</button>
+        </form>
+
+        <!-- 3-Mode View Switcher -->
+        <div class="segmented-control">
+          <button class="seg-btn active" id="modeBtn-ai" onclick="setViewMode('ai')">AI Browser View</button>
+          <button class="seg-btn" id="modeBtn-split" onclick="setViewMode('split')">Split (Human vs AI)</button>
+          <button class="seg-btn" id="modeBtn-race" onclick="setViewMode('race')">Hackathon Race Demo</button>
+        </div>
+      </div>
+
+      <!-- Row 3: Quick Bookmarks Bar + Kiro Spec Inspector -->
+      <div class="bookmarks-strip">
+        <div class="bookmark-chips">
+          <span style="color: var(--text-muted); font-weight: 600; margin-right: 4px;">Quick Bookmarks:</span>
+          <button class="bookmark-btn" onclick="quickNavigate('https://books.toscrape.com')">Book Store (Click Categories & Books!)</button>
+          <button class="bookmark-btn" onclick="quickNavigate('https://news.ycombinator.com')">Hacker News Live</button>
+          <button class="bookmark-btn" onclick="quickNavigate('https://en.wikipedia.org/wiki/Spider-Man')">Wikipedia: Spider-Man</button>
+          <button class="bookmark-btn" onclick="quickNavigate('https://en.wikipedia.org/wiki/Resonance')">Wikipedia: Resonance</button>
+          <button class="bookmark-btn" onclick="quickNavigate('Quantum computing')">Search: Quantum Computing</button>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 11px;">
+          <button class="bookmark-btn" style="border-color: var(--emerald-border); color: var(--emerald-bright);" onclick="openKiroSpecsModal()">
+            /.kiro Specs & Hooks
+          </button>
+          <span style="color: var(--text-secondary);">
+            Engine: <strong style="color: var(--text-primary);">Chromium</strong> | Safety Brake: <strong style="color: var(--emerald-bright);">ON</strong>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BROWSER VIEWPORT -->
+    <main class="browser-viewport" id="browserViewport">
+      <!-- Rendered dynamically by app.js -->
+    </main>
+  </div>
+
+  <!-- MODAL 1: COMBINE ALL OPEN TABS FOR YOUR AI -->
+  <div id="allTabsModal" class="modal-backdrop hidden">
+    <div class="modal-card" style="max-width: 680px;">
+      <div class="modal-header">
+        <span style="font-weight: 600;">Combined Takeout Bag (All Open Browser Tabs)</span>
+        <button class="btn-secondary" onclick="closeAllTabsModal()">Close</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 12.5px; color: var(--text-secondary);">
+          Every tab you have open in your AgentGate Browser has been combined into one single package below so your AI can read all your tabs at once:
+        </div>
+        <pre id="allTabsPreviewBox" class="code-viewer" style="max-height: 340px;"></pre>
+        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+          <button class="btn-primary" onclick="copyAllTabsPayload()">Copy All Tabs for My AI</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 1B: PERMANENT DEFAULT AI (PASTE ONCE -> ALWAYS HAS ACCESS TO ALL TABS) -->
+  <div id="permanentAiModal" class="modal-backdrop hidden">
+    <div class="modal-card" style="max-width: 660px;">
+      <div class="modal-header">
+        <span style="font-weight: 600;">Permanent Default AI (Always Connected to Your Browser)</span>
+        <button class="btn-secondary" onclick="closePermanentAiModal()">Close</button>
+      </div>
+      <div class="modal-body">
+        <div style="padding: 12px 14px; background: var(--emerald-subtle); border: 1px solid var(--emerald-border); border-radius: 6px; font-size: 12.5px;">
+          <div style="font-weight: 600; color: var(--emerald-bright); margin-bottom: 3px;" id="permAiStatusTitle">
+            Active Default AI: Antigravity AI (Auto-Syncing All Tabs)
+          </div>
+          <div style="color: var(--text-primary);">
+            Paste your AI once below and click <strong>Save as Permanent Default AI</strong>. It becomes your permanent default AI across every tab you open—it automatically receives a live feed of all your tabs without you ever having to copy & paste again!
+          </div>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 12px; font-weight: 600; color: var(--text-secondary); margin-bottom: 5px;">
+            1. Name Your Default AI:
+          </label>
+          <input type="text" id="permAiNameInput" class="form-input" placeholder="e.g. Antigravity AI, My Claude Agent, ChatGPT..." />
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 12px; font-weight: 600; color: var(--text-secondary); margin-bottom: 5px;">
+            2. Paste Your AI (Paste your AI link, connection prompt, API/MCP config, or instructions):
+          </label>
+          <textarea id="permAiProfileInput" rows="3" class="form-input" style="font-family: var(--font-mono); font-size: 12px;" placeholder="Paste your AI here once..."></textarea>
+        </div>
+
+        <div style="padding: 10px 12px; background: var(--bg-canvas); border: 1px solid var(--border-default); border-radius: 6px; font-family: var(--font-mono); font-size: 11.5px; color: var(--text-secondary);">
+          <div>Live All-Tabs Feed for Your Permanent AI: <strong style="color: var(--emerald-bright);">http://localhost:3456/api/permanent-ai/feed</strong></div>
+          <div>Saved Kiro State File: <strong style="color: var(--text-primary);">.kiro/live-browser-state.json</strong> (<span id="permAiLastSyncText">Synced just now</span>)</div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+          <button class="btn-secondary" onclick="copyPermanentAiHandshake()">Copy 1-Time Handshake for Chat</button>
+          <button class="btn-primary" onclick="savePermanentAiFromModal()">Save as My Permanent Default AI</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 1C: /.kiro SPECS, HOOKS & STEERING INSPECTOR (FOR KIROWEEN JUDGES) -->
+  <div id="kiroSpecsModal" class="modal-backdrop hidden">
+    <div class="modal-card" style="max-width: 780px;">
+      <div class="modal-header">
+        <span style="font-weight: 600;">/.kiro Architecture — Specs, Agent Hooks, Steering & MCP</span>
+        <button class="btn-secondary" onclick="closeKiroSpecsModal()">Close</button>
+      </div>
+      <div class="modal-body" id="kiroSpecsModalBody" style="max-height: 75vh; overflow-y: auto;">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CREDITS & PLANS -->
+  <div id="creditsModal" class="modal-backdrop hidden">
+    <div class="modal-card" style="max-width: 640px;">
+      <div class="modal-header">
+        <span style="font-weight: 600;">Gate Credits & Plans</span>
+        <button class="btn-secondary" onclick="closeCreditsModal()">Close</button>
+      </div>
+      <div class="modal-body" id="creditsModalBody"></div>
+    </div>
+  </div>
+
+  <div id="toastBanner" class="toast-banner hidden"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

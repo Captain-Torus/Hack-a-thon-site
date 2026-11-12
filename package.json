@@ -1,0 +1,17 @@
+{
+  "name": "agentgate",
+  "version": "1.0.0",
+  "description": "Bidirectional Headless UI Compiler & Fast-Track Gate for Autonomous AI Agents",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "playwright": "^1.65.0"
+  }
+}

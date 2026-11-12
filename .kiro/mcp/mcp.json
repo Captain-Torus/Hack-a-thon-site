@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "agentgate": {
+      "command": "node",
+      "args": ["server.js", "--mcp"],
+      "env": {
+        "AGENTGATE_PORT": "3000"
+      },
+      "capabilities": [
+        "translate_url",
+        "auto_configure_gate",
+        "execute_action",
+        "export_takeout"
+      ]
+    }
+  }
+}

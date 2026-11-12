@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+npm-debug.log*
+public/screenshots/*.png
+
+# IMPORTANT FOR KIROWEEN JUDGES:
+# Do NOT ignore /.kiro — all specs, hooks, steering, and MCP configs are tracked!
+!/.kiro/
+!/.kiro/**

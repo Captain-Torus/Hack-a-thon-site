@@ -1,0 +1,12 @@
+{
+  "hookName": "on-high-risk-action-safety-brake",
+  "trigger": "browser.action.invoked",
+  "condition": "action.highRisk === true && safetyBrake === true",
+  "description": "Intercepts checkout, payment, or delete actions initiated by the Permanent AI and places them in the human approval bar.",
+  "actions": [
+    {
+      "type": "halt_execution",
+      "queue": "pendingApprovals"
+    }
+  ]
+}

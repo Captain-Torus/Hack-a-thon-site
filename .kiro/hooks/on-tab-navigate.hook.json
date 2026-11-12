@@ -1,0 +1,15 @@
+{
+  "hookName": "on-tab-navigate-sync-permanent-ai",
+  "trigger": "browser.tab.navigated",
+  "description": "Automatically syncs the newly translated browser tab and Takeout Bag to the user's Permanent Default AI feed.",
+  "actions": [
+    {
+      "type": "write_state_snapshot",
+      "target": "/.kiro/live-browser-state.json"
+    },
+    {
+      "type": "update_endpoint",
+      "endpoint": "/api/permanent-ai/feed"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "isConfigured": true,
+  "aiName": "Antigravity AI",
+  "pastedAiProfile": "Antigravity AI — Default Permanent Browser Agent (Full Live Access to http://localhost:3456)",
+  "autoSyncAllTabs": true,
+  "allowTabControl": true,
+  "liveFeedUrl": "http://localhost:3456/api/permanent-ai/feed",
+  "controlUrl": "http://localhost:3456/api/ai-mission",
+  "lastSyncedAt": "5:42:03 PM",
+  "savedAt": "2026-11-12T22:42:03.586Z"
+}

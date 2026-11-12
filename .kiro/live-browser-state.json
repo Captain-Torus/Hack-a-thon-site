@@ -1,0 +1,486 @@
+{
+  "permanentAiName": "Antigravity AI",
+  "pastedAiProfile": "Antigravity AI — Default Permanent Browser Agent (Full Live Access to http://localhost:3456)",
+  "autoSyncAllTabs": true,
+  "lastSyncedAt": "5:44:20 PM",
+  "triggerReason": "permanent-ai-mission",
+  "activeTabId": "tab_0807c6",
+  "openTabsCount": 3,
+  "pendingSafetyBrakeHolds": [],
+  "openTabs": [
+    {
+      "tabNumber": 1,
+      "id": "tab_0807c6",
+      "isActive": true,
+      "isBlankNewTab": false,
+      "title": "QBReader: French History %",
+      "url": "https://www.qbreader.org/db/",
+      "stats": {
+        "beforeSize": 15643,
+        "afterSize": 535,
+        "percentSmaller": 96.6
+      },
+      "takeoutBullets": "PAGE TITLE: QBReader - Database\nURL: https://www.qbreader.org/db/\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. Search the database that powers QB Reader.\n2. Click on a card footer to view a question's stats. Check out the backup page to access the entire database. To copy a question to the clipboard, click on the left side of the header. To collapse a question, click on the right side of the header.\n3. If your answer was parsed incorrectly, please enter what answer you gave below.\n4. Literature 0%-+Min50%Max\n5. History 0%-+Min50%Max\n6. Science 0%-+Min50%Max\n7. Fine Arts 0%-+Min50%Max\n8. Religion 0%-+Min50%Max\n9. Mythology 0%-+Min50%Max\n10. Philosophy 0%-+Min50%Max\n11. Social Science 0%-+Min50%Max\n12. Current Events 0%-+Min50%Max\n13. Geography 0%-+Min50%Max\n14. Other Academic 0%-+Min50%Max\n15. Pop Culture 0%-+Min50%Max\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"QBReader\" -> https://www.qbreader.org/\n• [lnk_2] \"Play\" -> https://www.qbreader.org/play/\n• [lnk_3] \"Multiplayer\" -> https://www.qbreader.org/play/mp/\n• [lnk_4] \"Database\" -> https://www.qbreader.org/db/\n• [lnk_5] \"Search\" -> https://www.qbreader.org/db/\n• [lnk_6] \"Backups\" -> https://www.qbreader.org/db/backups\n• [lnk_7] \"Set List\" -> https://www.qbreader.org/db/set-list/\n• [lnk_8] \"Frequency List\" -> https://www.qbreader.org/db/frequency-list/\n• [lnk_9] \"Geoword\" -> https://www.qbreader.org/play/geoword/\n• [lnk_10] \"Tools\" -> https://www.qbreader.org/tools/\n• [lnk_11] \"API Docs\" -> https://www.qbreader.org/tools/api-docs/\n• [lnk_12] \"MODAQ\" -> https://modaq.github.io/\n• [lnk_13] \"Packet Parser\" -> https://www.qbreader.org/tools/packet-parser/\n• [lnk_14] \"Packet Viewer\" -> https://www.qbreader.org/tools/packet-viewer/\n\n--- ACTION BUTTONS (11 buttons) ---\n• [btn_1] \"Light\" (Safe)\n• [btn_2] \"Night\" (Safe)\n• [btn_3] \"Auto\" (Safe)\n• [btn_4] \"Min\" (Safe)\n• [btn_5] \"50%\" (Safe)\n• [btn_6] \"Max\" (Safe)\n• [btn_7] \"Reset\" (Safe)\n• [btn_8] \"Random\" (Safe)\n• [btn_9] \"Difficulties\" (Safe)\n• [btn_10] \"Categories\" (Safe)\n• [btn_11] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
+      "dataItems": [
+        "TOTAL QBREADER DATABASE: 352,153 total questions (190,173 Tossups + 161,980 Bonuses).",
+        "TOTAL HISTORY CATEGORY: 74,679 History questions (40,807 Tossups + 33,872 Bonuses) — 21.21% of all QBReader questions.",
+        "EUROPEAN HISTORY SUBCATEGORY: 24,826 questions (13,376 Tossups + 11,450 Bonuses) — 33.24% of History.",
+        "1. \"FRENCH\" IN HISTORY (Question + Answer): 5,125 questions (2,416 Tossups + 2,709 Bonuses) = 6.86% of all History (20.64% of European History, 1.46% of entire DB).",
+        "2. \"FRENCH\" OR \"FRANCE\" IN HISTORY (Question + Answer): 8,068 questions (4,102 Tossups + 3,966 Bonuses) = 10.80% of all History (32.50% of European History, 2.29% of entire DB).",
+        "3. STRICT ANSWERLINE ONLY (\"French\" or \"France\" in the Answerline): 1,075 questions (496 Tossups + 579 Bonuses) = 1.44% of all History (0.79% for \"French\" alone: 590 questions)."
+      ],
+      "links": [
+        {
+          "id": "lnk_1",
+          "label": "QBReader",
+          "url": "https://www.qbreader.org/"
+        },
+        {
+          "id": "lnk_2",
+          "label": "Play",
+          "url": "https://www.qbreader.org/play/"
+        },
+        {
+          "id": "lnk_3",
+          "label": "Multiplayer",
+          "url": "https://www.qbreader.org/play/mp/"
+        },
+        {
+          "id": "lnk_4",
+          "label": "Database",
+          "url": "https://www.qbreader.org/db/"
+        },
+        {
+          "id": "lnk_5",
+          "label": "Search",
+          "url": "https://www.qbreader.org/db/"
+        },
+        {
+          "id": "lnk_6",
+          "label": "Backups",
+          "url": "https://www.qbreader.org/db/backups"
+        },
+        {
+          "id": "lnk_7",
+          "label": "Set List",
+          "url": "https://www.qbreader.org/db/set-list/"
+        },
+        {
+          "id": "lnk_8",
+          "label": "Frequency List",
+          "url": "https://www.qbreader.org/db/frequency-list/"
+        },
+        {
+          "id": "lnk_9",
+          "label": "Geoword",
+          "url": "https://www.qbreader.org/play/geoword/"
+        },
+        {
+          "id": "lnk_10",
+          "label": "Tools",
+          "url": "https://www.qbreader.org/tools/"
+        },
+        {
+          "id": "lnk_11",
+          "label": "API Docs",
+          "url": "https://www.qbreader.org/tools/api-docs/"
+        },
+        {
+          "id": "lnk_12",
+          "label": "MODAQ",
+          "url": "https://modaq.github.io/"
+        },
+        {
+          "id": "lnk_13",
+          "label": "Packet Parser",
+          "url": "https://www.qbreader.org/tools/packet-parser/"
+        },
+        {
+          "id": "lnk_14",
+          "label": "Packet Viewer",
+          "url": "https://www.qbreader.org/tools/packet-viewer/"
+        }
+      ],
+      "buttons": [
+        {
+          "id": "btn_1",
+          "label": "Light",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_2",
+          "label": "Night",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_3",
+          "label": "Auto",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_4",
+          "label": "Min",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_5",
+          "label": "50%",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_6",
+          "label": "Max",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_7",
+          "label": "Reset",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_8",
+          "label": "Random",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_9",
+          "label": "Difficulties",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_10",
+          "label": "Categories",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_11",
+          "label": "Complete Instant Checkout & Pay ($49.00)",
+          "target": "https://www.qbreader.org/db/#checkout-pay",
+          "highRisk": true,
+          "riskReason": "Contains payment or checkout action (\"checkout\")"
+        }
+      ]
+    },
+    {
+      "tabNumber": 2,
+      "id": "tab_669352",
+      "isActive": false,
+      "isBlankNewTab": false,
+      "title": "QBReader - Database",
+      "url": "https://www.qbreader.org/db/",
+      "stats": {
+        "beforeSize": 15643,
+        "afterSize": 535,
+        "percentSmaller": 96.6
+      },
+      "takeoutBullets": "PAGE TITLE: QBReader - Database\nURL: https://www.qbreader.org/db/\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. Search the database that powers QB Reader.\n2. Click on a card footer to view a question's stats. Check out the backup page to access the entire database. To copy a question to the clipboard, click on the left side of the header. To collapse a question, click on the right side of the header.\n3. If your answer was parsed incorrectly, please enter what answer you gave below.\n4. Literature 0%-+Min50%Max\n5. History 0%-+Min50%Max\n6. Science 0%-+Min50%Max\n7. Fine Arts 0%-+Min50%Max\n8. Religion 0%-+Min50%Max\n9. Mythology 0%-+Min50%Max\n10. Philosophy 0%-+Min50%Max\n11. Social Science 0%-+Min50%Max\n12. Current Events 0%-+Min50%Max\n13. Geography 0%-+Min50%Max\n14. Other Academic 0%-+Min50%Max\n15. Pop Culture 0%-+Min50%Max\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"QBReader\" -> https://www.qbreader.org/\n• [lnk_2] \"Play\" -> https://www.qbreader.org/play/\n• [lnk_3] \"Multiplayer\" -> https://www.qbreader.org/play/mp/\n• [lnk_4] \"Database\" -> https://www.qbreader.org/db/\n• [lnk_5] \"Search\" -> https://www.qbreader.org/db/\n• [lnk_6] \"Backups\" -> https://www.qbreader.org/db/backups\n• [lnk_7] \"Set List\" -> https://www.qbreader.org/db/set-list/\n• [lnk_8] \"Frequency List\" -> https://www.qbreader.org/db/frequency-list/\n• [lnk_9] \"Geoword\" -> https://www.qbreader.org/play/geoword/\n• [lnk_10] \"Tools\" -> https://www.qbreader.org/tools/\n• [lnk_11] \"API Docs\" -> https://www.qbreader.org/tools/api-docs/\n• [lnk_12] \"MODAQ\" -> https://modaq.github.io/\n• [lnk_13] \"Packet Parser\" -> https://www.qbreader.org/tools/packet-parser/\n• [lnk_14] \"Packet Viewer\" -> https://www.qbreader.org/tools/packet-viewer/\n\n--- ACTION BUTTONS (11 buttons) ---\n• [btn_1] \"Light\" (Safe)\n• [btn_2] \"Night\" (Safe)\n• [btn_3] \"Auto\" (Safe)\n• [btn_4] \"Min\" (Safe)\n• [btn_5] \"50%\" (Safe)\n• [btn_6] \"Max\" (Safe)\n• [btn_7] \"Reset\" (Safe)\n• [btn_8] \"Random\" (Safe)\n• [btn_9] \"Difficulties\" (Safe)\n• [btn_10] \"Categories\" (Safe)\n• [btn_11] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
+      "dataItems": [
+        "Search the database that powers QB Reader.",
+        "Click on a card footer to view a question's stats. Check out the backup page to access the entire database. To copy a question to the clipboard, click on the left side of the header. To collapse a question, click on the right side of the header.",
+        "If your answer was parsed incorrectly, please enter what answer you gave below.",
+        "Literature 0%-+Min50%Max",
+        "History 0%-+Min50%Max",
+        "Science 0%-+Min50%Max",
+        "Fine Arts 0%-+Min50%Max",
+        "Religion 0%-+Min50%Max",
+        "Mythology 0%-+Min50%Max",
+        "Philosophy 0%-+Min50%Max",
+        "Social Science 0%-+Min50%Max",
+        "Current Events 0%-+Min50%Max",
+        "Geography 0%-+Min50%Max",
+        "Other Academic 0%-+Min50%Max",
+        "Pop Culture 0%-+Min50%Max"
+      ],
+      "links": [
+        {
+          "id": "lnk_1",
+          "label": "QBReader",
+          "url": "https://www.qbreader.org/"
+        },
+        {
+          "id": "lnk_2",
+          "label": "Play",
+          "url": "https://www.qbreader.org/play/"
+        },
+        {
+          "id": "lnk_3",
+          "label": "Multiplayer",
+          "url": "https://www.qbreader.org/play/mp/"
+        },
+        {
+          "id": "lnk_4",
+          "label": "Database",
+          "url": "https://www.qbreader.org/db/"
+        },
+        {
+          "id": "lnk_5",
+          "label": "Search",
+          "url": "https://www.qbreader.org/db/"
+        },
+        {
+          "id": "lnk_6",
+          "label": "Backups",
+          "url": "https://www.qbreader.org/db/backups"
+        },
+        {
+          "id": "lnk_7",
+          "label": "Set List",
+          "url": "https://www.qbreader.org/db/set-list/"
+        },
+        {
+          "id": "lnk_8",
+          "label": "Frequency List",
+          "url": "https://www.qbreader.org/db/frequency-list/"
+        },
+        {
+          "id": "lnk_9",
+          "label": "Geoword",
+          "url": "https://www.qbreader.org/play/geoword/"
+        },
+        {
+          "id": "lnk_10",
+          "label": "Tools",
+          "url": "https://www.qbreader.org/tools/"
+        },
+        {
+          "id": "lnk_11",
+          "label": "API Docs",
+          "url": "https://www.qbreader.org/tools/api-docs/"
+        },
+        {
+          "id": "lnk_12",
+          "label": "MODAQ",
+          "url": "https://modaq.github.io/"
+        },
+        {
+          "id": "lnk_13",
+          "label": "Packet Parser",
+          "url": "https://www.qbreader.org/tools/packet-parser/"
+        },
+        {
+          "id": "lnk_14",
+          "label": "Packet Viewer",
+          "url": "https://www.qbreader.org/tools/packet-viewer/"
+        }
+      ],
+      "buttons": [
+        {
+          "id": "btn_1",
+          "label": "Light",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_2",
+          "label": "Night",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_3",
+          "label": "Auto",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_4",
+          "label": "Min",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_5",
+          "label": "50%",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_6",
+          "label": "Max",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_7",
+          "label": "Reset",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_8",
+          "label": "Random",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_9",
+          "label": "Difficulties",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_10",
+          "label": "Categories",
+          "target": "https://www.qbreader.org/db/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_11",
+          "label": "Complete Instant Checkout & Pay ($49.00)",
+          "target": "https://www.qbreader.org/db/#checkout-pay",
+          "highRisk": true,
+          "riskReason": "Contains payment or checkout action (\"checkout\")"
+        }
+      ]
+    },
+    {
+      "tabNumber": 3,
+      "id": "tab_9b5992",
+      "isActive": false,
+      "isBlankNewTab": false,
+      "title": "All products | Books to Scrape -",
+      "url": "https://books.toscrape.com/",
+      "stats": {
+        "beforeSize": 12751,
+        "afterSize": 633,
+        "percentSmaller": 95
+      },
+      "takeoutBullets": "PAGE TITLE: All products | Books to Scrape - Sandbox\nURL: https://books.toscrape.com/\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. A Light in the ... £51.77 In stock Add to basket\n2. Tipping the Velvet £53.74 In stock Add to basket\n3. Soumission £50.10 In stock Add to basket\n4. Sharp Objects £47.82 In stock Add to basket\n5. Sapiens: A Brief History ... £54.23 In stock Add to basket\n6. The Requiem Red £22.65 In stock Add to basket\n7. The Dirty Little Secrets ... £33.34 In stock Add to basket\n8. The Coming Woman: A ... £17.93 In stock Add to basket\n9. The Boys in the ... £22.60 In stock Add to basket\n10. The Black Maria £52.15 In stock Add to basket\n11. Starving Hearts (Triangular Trade ... £13.99 In stock Add to basket\n12. Shakespeare's Sonnets £20.66 In stock Add to basket\n13. Set Me Free £17.46 In stock Add to basket\n14. Scott Pilgrim's Precious Little ... £52.29 In stock Add to basket\n15. Rip it Up and ... £35.02 In stock Add to basket\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"Books to Scrape\" -> https://books.toscrape.com/index.html\n• [lnk_2] \"Home\" -> https://books.toscrape.com/index.html\n• [lnk_3] \"Books\" -> https://books.toscrape.com/catalogue/category/books_1/index.html\n• [lnk_4] \"Travel\" -> https://books.toscrape.com/catalogue/category/books/travel_2/index.html\n• [lnk_5] \"Mystery\" -> https://books.toscrape.com/catalogue/category/books/mystery_3/index.html\n• [lnk_6] \"Historical Fiction\" -> https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html\n• [lnk_7] \"Sequential Art\" -> https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html\n• [lnk_8] \"Classics\" -> https://books.toscrape.com/catalogue/category/books/classics_6/index.html\n• [lnk_9] \"Philosophy\" -> https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html\n• [lnk_10] \"Romance\" -> https://books.toscrape.com/catalogue/category/books/romance_8/index.html\n• [lnk_11] \"Womens Fiction\" -> https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html\n• [lnk_12] \"Fiction\" -> https://books.toscrape.com/catalogue/category/books/fiction_10/index.html\n• [lnk_13] \"Childrens\" -> https://books.toscrape.com/catalogue/category/books/childrens_11/index.html\n• [lnk_14] \"Religion\" -> https://books.toscrape.com/catalogue/category/books/religion_12/index.html\n\n--- ACTION BUTTONS (2 buttons) ---\n• [btn_1] \"Add to basket\" (Safe)\n• [btn_2] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
+      "dataItems": [
+        "A Light in the ... £51.77 In stock Add to basket",
+        "Tipping the Velvet £53.74 In stock Add to basket",
+        "Soumission £50.10 In stock Add to basket",
+        "Sharp Objects £47.82 In stock Add to basket",
+        "Sapiens: A Brief History ... £54.23 In stock Add to basket",
+        "The Requiem Red £22.65 In stock Add to basket",
+        "The Dirty Little Secrets ... £33.34 In stock Add to basket",
+        "The Coming Woman: A ... £17.93 In stock Add to basket",
+        "The Boys in the ... £22.60 In stock Add to basket",
+        "The Black Maria £52.15 In stock Add to basket",
+        "Starving Hearts (Triangular Trade ... £13.99 In stock Add to basket",
+        "Shakespeare's Sonnets £20.66 In stock Add to basket",
+        "Set Me Free £17.46 In stock Add to basket",
+        "Scott Pilgrim's Precious Little ... £52.29 In stock Add to basket",
+        "Rip it Up and ... £35.02 In stock Add to basket"
+      ],
+      "links": [
+        {
+          "id": "lnk_1",
+          "label": "Books to Scrape",
+          "url": "https://books.toscrape.com/index.html"
+        },
+        {
+          "id": "lnk_2",
+          "label": "Home",
+          "url": "https://books.toscrape.com/index.html"
+        },
+        {
+          "id": "lnk_3",
+          "label": "Books",
+          "url": "https://books.toscrape.com/catalogue/category/books_1/index.html"
+        },
+        {
+          "id": "lnk_4",
+          "label": "Travel",
+          "url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+        },
+        {
+          "id": "lnk_5",
+          "label": "Mystery",
+          "url": "https://books.toscrape.com/catalogue/category/books/mystery_3/index.html"
+        },
+        {
+          "id": "lnk_6",
+          "label": "Historical Fiction",
+          "url": "https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html"
+        },
+        {
+          "id": "lnk_7",
+          "label": "Sequential Art",
+          "url": "https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html"
+        },
+        {
+          "id": "lnk_8",
+          "label": "Classics",
+          "url": "https://books.toscrape.com/catalogue/category/books/classics_6/index.html"
+        },
+        {
+          "id": "lnk_9",
+          "label": "Philosophy",
+          "url": "https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html"
+        },
+        {
+          "id": "lnk_10",
+          "label": "Romance",
+          "url": "https://books.toscrape.com/catalogue/category/books/romance_8/index.html"
+        },
+        {
+          "id": "lnk_11",
+          "label": "Womens Fiction",
+          "url": "https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html"
+        },
+        {
+          "id": "lnk_12",
+          "label": "Fiction",
+          "url": "https://books.toscrape.com/catalogue/category/books/fiction_10/index.html"
+        },
+        {
+          "id": "lnk_13",
+          "label": "Childrens",
+          "url": "https://books.toscrape.com/catalogue/category/books/childrens_11/index.html"
+        },
+        {
+          "id": "lnk_14",
+          "label": "Religion",
+          "url": "https://books.toscrape.com/catalogue/category/books/religion_12/index.html"
+        }
+      ],
+      "buttons": [
+        {
+          "id": "btn_1",
+          "label": "Add to basket",
+          "target": "https://books.toscrape.com/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_2",
+          "label": "Complete Instant Checkout & Pay ($49.00)",
+          "target": "https://books.toscrape.com/#checkout-pay",
+          "highRisk": true,
+          "riskReason": "Contains payment or checkout action (\"checkout\")"
+        }
+      ]
+    }
+  ]
+}
