@@ -1,42 +1,58 @@
-# AgentGate Browser — 3-Minute Video Script & Devpost Submission Copy
+# AgentGate Browser — 2.5-Minute Video Script & Devpost Submission Copy
 
-## Part 1: The 3-Minute Demo Video Script (Record with QuickTime or Loom)
+## Part 1: The 2.5-Minute Demo Video Script
 
-**Total Time:** ~2 minutes 35 seconds (Judges love videos under 2:45 that jump straight into the live demo!)
+**Before you hit record:**
+1. Open `http://localhost:3456` on your **Wikipedia: Spider-Man** tab.
+2. Click **`Split (2 AIs Side-by-Side)`** in the top right so both AIs are sitting at the **`0.00s`** starting line.
 
 ---
 
-### [0:00 – 0:25] The Hook & Problem (Show `Split (Human vs AI)` View on Screen)
-> **"Hi judges! Today's AI browser agents have a massive problem: websites were built for human eyes, not AI. When an AI tries to browse a normal site, it's forced to read 50,000 to 100,000 words of bloated HTML, CSS, and ads—or take slow screenshots. That takes 35 seconds per click, costs 40 cents a page, and worse—if the AI clicks the wrong button, it can accidentally buy something or delete your data.**
+### Scene 1: The Hook & Simultaneous 2-AI Race (0:00 – 0:45)
+*(Start on **`Split (2 AIs Side-by-Side)`** with both AIs waiting at `0.00s`)*
+
+> **"Hi judges! Today's AI browser agents have a massive problem: websites were built for human eyes, not AI.**
 >
-> **So we built AgentGate Browser: the first headless Chromium web browser that translates the entire web into a 98% smaller, AI-native interface in milliseconds."**
-
----
-
-### [0:25 – 1:10] Live Demo 1: Browsing + Permanent Default AI (Switch to `AI Browser View`)
-*(Click `+ New Tab` to show the clean New Tab screen and the **Permanent Default AI** box)*
-> **"First, instead of copying and pasting text on every single tab, AgentGate has a 'Permanent Default AI' bridge. You paste in your AI once—and click 'Save as Permanent Default AI'. From that moment on, every tab you open is automatically synced to your AI via our Kiro Agent Hooks and `.kiro/live-browser-state.json`."**
+> **Look at the left side of my screen: when a standard AI tries to read a real webpage like Wikipedia's Spider-Man article, it has to wade through tens of thousands of words of raw HTML, CSS, and menus, or take slow screenshots. That wastes time, burns 40 cents a page in tokens, and risks clicking the wrong button.**
 >
-> *(Click a Quick Bookmark like `Book Store` or type `qbreader.org`, then click a link inside the translated page)*
-> **"Watch how fast this is: our Playwright Headless Chromium engine renders the real website, strips 100% of the ads and layout clutter, and gives both you and your AI a clean summary, clickable sub-page links, and a formatted AI Takeout Bag in Simple List, JSON, or CSV. When I just opened QBReader in a tab, my Permanent AI automatically read my live tab, navigated into the database, and calculated that 10.8% of all History questions are about France—without me copying or pasting a single word."**
+> **So we built AgentGate Browser—the first headless Chromium web browser that translates the entire web into a 98% smaller, AI-native interface.**
+>
+> **Watch what happens when we start both AIs at the exact same 0.00-second mark:"**
+
+*(Click the green **`Start Both AIs at 0.00s`** button!)*
+
+> **"Our AgentGate AI on the right strips the page down by over 95% and finishes extracting the key facts and links in 0.42 seconds for 0.04 cents—while the standard AI on the left is still stuck taking screenshots and parsing raw HTML tags!"**
 
 ---
 
-### [1:10 – 1:45] Live Demo 2: The Browser Safety Brake
-*(Scroll to the Action Buttons table on any tab and click the red `Complete Instant Checkout & Pay` button)*
-> **"Second, what happens if your AI tries to click a button that spends money or deletes data? Watch when we click 'Complete Instant Checkout & Pay'—boom! Our Browser Safety Brake immediately freezes the action and pops up this orange Human-in-the-Loop approval banner at the top of the browser. Nothing gets purchased unless the human clicks Approve."**
+### Scene 2: Permanent Default AI & Live AI Browsing (0:45 – 1:30)
+*(Click **`AI Browser View`**, then click **`+ New Tab`** at the top left)*
+
+> **"How do you connect your own AI to AgentGate Browser? Instead of copying and pasting text on every single tab, we built a 'Permanent Default AI' bridge.**
+>
+> **You paste in your AI once right here and click 'Save as Permanent Default AI'. From that moment on, every tab you open automatically syncs to your AI in the background using our Kiro Agent Hooks and `.kiro/live-browser-state.json`."**
+
+*(Click the **`Hacker News Live`** or **`Wikipedia: Spider-Man`** bookmark, and click any link inside the translated page)*
+
+> **"When you browse in AI Browser View, our Playwright Headless Chromium engine loads the real website, strips 100% of the ads and clutter, and gives both you and your AI a clean summary, clickable links that navigate to the next page in AI mode, and an AI Takeout Bag in Simple List, Code Data, or Spreadsheet format."**
 
 ---
 
-### [1:45 – 2:15] Live Demo 3: Hackathon Speed & Cost Race (`Hackathon Race Demo` Tab)
-*(Click `Hackathon Race Demo` in the top bar, then click `Start Live Speed & Cost Race`)*
-> **"In our live benchmark mode, a standard screenshot-based AI browser agent takes 34.2 seconds and $0.42 in tokens to parse a page. AgentGate Browser compiles the exact same page in under 200 milliseconds for $0.0004—over 100x faster and 99% cheaper."**
+### Scene 3: The Browser Safety Brake (1:30 – 2:00)
+*(Look at the **Action Buttons** table on the right side of the page, and click the red **`Click Button (Triggers Safety Brake)`** next to `Complete Instant Checkout & Pay`)*
+
+> **"What happens if an AI agent tries to click a button that spends money or deletes data? Watch when we click 'Complete Instant Checkout & Pay'—boom!**
+>
+> **Our Browser Safety Brake immediately freezes the action and pops up this orange Human-in-the-Loop approval bar at the top of the browser. Nothing gets bought or deleted unless the human clicks Approve."**
+
+*(Click **`Block Action`** in the orange bar)*
 
 ---
 
-### [2:15 – 2:35] Built with Kiro (`/.kiro Specs & Hooks` Button)
-*(Click the green `/.kiro Specs & Hooks` button in the bookmarks bar)*
-> **"Finally, we built AgentGate Browser using Kiro's spec-driven workflow. Right inside the browser, you can inspect our `/.kiro/specs/`, steering rules, MCP config, and live Agent Hook execution logs that fire every time a tab navigates or the Safety Brake triggers. Thank you!"**
+### Scene 4: Kiro Architecture (`/.kiro Specs & Hooks`) (2:00 – 2:25)
+*(Click the green **`/.kiro Specs & Hooks`** button in the bookmarks bar)*
+
+> **"Finally, we built AgentGate Browser using Kiro's spec-driven architecture. Right inside the browser, judges can inspect our `.kiro/specs`, steering rules, MCP config, and live Agent Hook execution logs that fire every time a tab navigates or the Safety Brake triggers. Thank you for watching!"**
 
 ---
 
@@ -49,7 +65,7 @@
 `A headless Chromium web browser that compiles bloated websites into 98% smaller AI-ready pages in milliseconds—with a Permanent Default AI Bridge and a deterministic Safety Brake.`
 
 ### Category to Select on Kiroween
-- **Primary Category:** `Frankenstein` *(Stitching together two incompatible worlds—bloated human HTML/DOM and fast, deterministic AI agents—into one seamless AI Browser)* OR `Skeleton Crew`
+- **Primary Category:** `Frankenstein` *(Stitching together two incompatible worlds—bloated human HTML/DOM and fast, deterministic AI agents—into one seamless AI Browser)*
 - **Bonus Prizes to Check:** `Best Startup Project ($10,000)` and `Student Prize ($1,500)`
 
 ### "How We Used Kiro" (Copy-Paste into the Devpost Kiro Question)
