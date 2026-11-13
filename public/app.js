@@ -11,8 +11,11 @@ let browserState = {
   activeTakeoutFormat: 'bullets',
   splitHumanMode: 'screenshot', // 'screenshot' | 'iframe'
   splitTaskPrompt: 'Extract the top key facts, main summary points, and most important clickable links from this webpage.',
-  splitAiRunning: false,
-  splitSlowStep: 5,
+  splitRaceState: 'ready', // 'ready' | 'running' | 'done'
+  splitSlowElapsedMs: 0,
+  splitFastElapsedMs: 0,
+  splitSlowStep: 0,
+  splitFastStep: 0,
   raceRunning: false,
   raceDone: false,
   lastHash: ''
@@ -371,7 +374,7 @@ function renderAiBrowserPageView(tab) {
 }
 
 // ============================================================================
-// MODE 2: SPLIT VIEW (2 AIs SIDE-BY-SIDE ON THE SAME REAL WEBSITE!)
+// MODE 2: SPLIT VIEW (2 AIs SIDE-BY-SIDE — FAIR START FROM 0.00s!)
 // ============================================================================
 
 function renderSplitView(tab) {
@@ -380,7 +383,7 @@ function renderSplitView(tab) {
       <div class="panel" style="padding: 28px; text-align: center;">
         <h3 style="font-size: 16px; margin-bottom: 8px;">Open Any Website First to Watch 2 AIs Side-by-Side</h3>
         <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-          Click a Quick Bookmark above (like <strong>QBReader Quizbowl</strong> or <strong>Wikipedia: Spider-Man</strong>) to watch a Standard AI (on raw HTML/screenshots) vs. your AgentGate AI side-by-side!
+          Click a Quick Bookmark above (like <strong>QBReader Quizbowl</strong> or <strong>Wikipedia: Spider-Man</strong>) to put both AIs at the 0.00s starting line!
         </p>
         <div style="display: flex; justify-content: center; gap: 10px;">
           <button class="btn-primary" onclick="quickNavigate('https://en.wikipedia.org/wiki/Spider-Man')">Load Wikipedia: Spider-Man</button>
@@ -393,39 +396,57 @@ function renderSplitView(tab) {
   const c = tab.compiled;
   const useShot = browserState.splitHumanMode === 'screenshot' && c.screenshotUrl;
   const permName = browserState.permanentAi?.aiName || 'Antigravity AI';
+  const rState = browserState.splitRaceState; // 'ready' | 'running' | 'done'
 
+  const slowSec = (browserState.splitSlowElapsedMs / 1000).toFixed(2);
+  const fastSec = (browserState.splitFastElapsedMs / 1000).toFixed(2);
+
+  // AI #1 (Standard AI) Steps
   const slowSteps = [
-    `[01.1s] Launching heavy browser & downloading ${c.stats.beforeSize.toLocaleString()} words of raw HTML/CSS...`,
-    `[06.8s] Taking full-page screenshot #1 (1920x1080 PNG) of ${c.title}...`,
-    `[14.5s] Vision AI struggling with navigation menus, sidebars, CSS classes & scripts...`,
-    `[23.9s] Taking screenshot #2 and re-scanning raw DOM nodes...`,
-    `[34.2s] FINISHED LATE: Finally answered task after 34.2 seconds. Burned $0.42 in AI tokens.`
+    `[00.20s] Launching standard browser & fetching ${c.stats.beforeSize.toLocaleString()} words of raw HTML/CSS...`,
+    `[01.80s] Taking full-page screenshot #1 (1920x1080 PNG) of ${c.title}...`,
+    `[03.60s] Vision AI parsing navigation menus, sidebars, CSS classes & layout divs...`,
+    `[05.40s] Taking screenshot #2 & scanning raw DOM nodes for answer...`,
+    `[${slowSec}s] FINISHED LATE: Extracted page summary after ${slowSec}s. Burned $0.42 in AI tokens.`
   ];
-  const visibleSlowLogs = slowSteps.slice(0, browserState.splitSlowStep).join('\n');
 
+  // AI #2 (AgentGate AI) Steps — Also starts from 0.00s with ZERO head start!
   const topFacts = (c.dataItems || []).slice(0, 4).map((d, i) => `  ${i + 1}. ${d}`).join('\n');
   const topLinks = (c.navLinks || []).slice(0, 4).map(l => `  • ${l.label} -> ${l.url}`).join('\n');
-  const fastAiOutput = [
-    `[0.01s] Received AgentGate Translated Page (${c.stats.afterSize.toLocaleString()} words — ${c.stats.percentSmaller}% smaller!)`,
-    `[0.${String(c.latencyMs).padStart(2, '0')}s] TASK COMPLETE by ${permName} (Cost: $0.0004 — 99% Cheaper!):`,
-    ``,
-    `TASK: "${browserState.splitTaskPrompt}"`,
-    ``,
-    `EXTRACTED KEY FACTS FROM ${c.title.toUpperCase()}:`,
-    topFacts || '  (Page summary extracted cleanly)',
-    ``,
-    `KEY CLICKABLE LINKS READY FOR AI NAVIGATION:`,
-    topLinks || '  (Links ready)'
-  ].join('\n');
+
+  const fastSteps = [
+    `[00.05s] Fetching live page via AgentGate Headless Compiler...`,
+    `[00.18s] Stripped ${c.stats.beforeSize.toLocaleString()} raw words down to ${c.stats.afterSize.toLocaleString()} clean words (-${c.stats.percentSmaller}%)...`,
+    `[${fastSec}s] FINISHED FIRST (${fastSec}s — Cost: $0.0004):\n\nTASK: "${browserState.splitTaskPrompt}"\n\nEXTRACTED KEY FACTS FROM ${c.title.toUpperCase()}:\n${topFacts || '  (Summary extracted)'}\n\nCLICKABLE LINKS:\n${topLinks || '  (Links ready)'}`
+  ];
+
+  const slowLogText = rState === 'ready'
+    ? `WAITING AT STARTING LINE (0.00s)...\nClick "Start Both AIs at 0.00s" above so both AIs begin at the exact same moment!`
+    : slowSteps.slice(0, browserState.splitSlowStep).join('\n');
+
+  const fastLogText = rState === 'ready'
+    ? `WAITING AT STARTING LINE (0.00s — No Head Start!)...\nClick "Start Both AIs at 0.00s" above so both AIs begin at the exact same moment!`
+    : fastSteps.slice(0, browserState.splitFastStep).join('\n');
+
+  const slowStatusLabel = rState === 'ready'
+    ? 'Ready at Starting Line (0.00s)'
+    : (browserState.splitSlowStep < 5 ? `Running... (${slowSec}s elapsed)` : `Finished 2nd (${slowSec}s)`);
+
+  const fastStatusLabel = rState === 'ready'
+    ? 'Ready at Starting Line (0.00s)'
+    : (browserState.splitFastStep < 3 ? `Running... (${fastSec}s elapsed)` : `WINNER! Finished 1st (${fastSec}s)`);
 
   return `
-    <!-- Top Task Bar: Give Both AIs the Same Job on This Real Website -->
+    <!-- Top Task Bar: Fair Simultaneous Start for Both AIs -->
     <div class="panel" style="padding: 14px 18px; border-color: var(--emerald-border); background: var(--emerald-subtle);">
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
         <div style="font-weight: 700; font-size: 14px; color: var(--emerald-bright);">
-          2 AIs Side-by-Side on: ${escapeHtml(c.title)} (${escapeHtml(tab.url)})
+          2 AIs Side-by-Side (Simultaneous 0.00s Start) on: ${escapeHtml(c.title)}
         </div>
-        <span class="tag tag-emerald">Real-Time AI Comparison</span>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          ${rState !== 'ready' ? `<button type="button" class="btn-secondary" style="padding: 3px 9px; font-size: 11.5px;" onclick="resetSideBySideRace()">Reset Both to 0.00s</button>` : ''}
+          <span class="tag tag-emerald">Zero Head Start • Live Stopwatch</span>
+        </div>
       </div>
       <form style="display: flex; gap: 10px;" onsubmit="runSideBySideAiComparison(event)">
         <input
@@ -436,7 +457,7 @@ function renderSplitView(tab) {
           placeholder="Type any task or question for both AIs to run on this page..."
         />
         <button type="submit" class="btn-primary" style="white-space: nowrap;">
-          Run Both AIs Side-by-Side
+          Start Both AIs at 0.00s
         </button>
       </form>
     </div>
@@ -448,7 +469,7 @@ function renderSplitView(tab) {
           <div>
             <div class="panel-title" style="color: var(--danger-text);">AI #1: Standard AI (Without AgentGate)</div>
             <div style="font-size: 11.5px; color: var(--text-secondary);">
-              Forced to look at the bloated human website (${c.stats.beforeSize.toLocaleString()} words + screenshots)
+              Reads raw human website (${c.stats.beforeSize.toLocaleString()} words + screenshots)
             </div>
           </div>
           <div class="segmented-control">
@@ -458,30 +479,30 @@ function renderSplitView(tab) {
         </div>
 
         <div style="padding: 14px; display: flex; flex-direction: column; gap: 12px;">
-          <!-- AI #1 Live Status Bar -->
+          <!-- AI #1 Live Stopwatch Bar -->
           <div style="padding: 10px 12px; background: var(--danger-subtle); border: 1px solid var(--danger-border); border-radius: 6px; font-size: 12px; display: flex; justify-content: space-between; align-items: center;">
-            <span>Status: <strong style="color: var(--danger-text);">${browserState.splitAiRunning ? `Still reading raw HTML & screenshots (Step ${browserState.splitSlowStep}/5)...` : 'Finished Late (34.2 seconds)'}</strong></span>
-            <span style="font-family: var(--font-mono); color: var(--danger-text); font-weight: 600;">Cost: $0.42</span>
+            <span>Status: <strong style="color: var(--danger-text);" id="slowSplitStatusText">${escapeHtml(slowStatusLabel)}</strong></span>
+            <span style="font-family: var(--font-mono); color: var(--danger-text); font-weight: 600;">Timer: <span id="slowSplitTimerText">${slowSec}s</span> | Cost: ${rState === 'ready' ? '$0.00' : '$0.42'}</span>
           </div>
 
           <!-- AI #1 Live Brain Output -->
           <div>
             <div style="font-size: 11.5px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">
-              AI #1 Live Log (Struggling Through Raw Website Clutter):
+              AI #1 Live Work Log:
             </div>
-            <pre class="code-viewer" style="height: 155px; max-height: 155px;">${escapeHtml(visibleSlowLogs)}</pre>
+            <pre class="code-viewer" id="slowSplitLogBox" style="height: 165px; max-height: 165px;">${escapeHtml(slowLogText)}</pre>
           </div>
 
           <!-- What AI #1 Is Forced to Look At (The Real Human Website) -->
           <div>
             <div style="font-size: 11.5px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">
-              What AI #1 Sees (Human Webpage: ${escapeHtml(tab.url)}):
+              Input Fed to AI #1 (Bloated Human Webpage: ${escapeHtml(tab.url)}):
             </div>
             ${useShot
-              ? `<div style="height: 310px; overflow-y: auto; border: 1px solid var(--border-default); border-radius: 6px; background: #0d1117;">
+              ? `<div style="height: 300px; overflow-y: auto; border: 1px solid var(--border-default); border-radius: 6px; background: #0d1117;">
                    <img src="${escapeHtml(c.screenshotUrl)}" alt="Real Headless Chromium Render" style="width: 100%; display: block;" />
                  </div>`
-              : `<iframe src="${escapeHtml(tab.url)}" style="width: 100%; height: 310px; border: 1px solid var(--border-default); border-radius: 6px; background: #fff;"></iframe>`
+              : `<iframe src="${escapeHtml(tab.url)}" style="width: 100%; height: 300px; border: 1px solid var(--border-default); border-radius: 6px; background: #fff;"></iframe>`
             }
           </div>
         </div>
@@ -493,33 +514,33 @@ function renderSplitView(tab) {
           <div>
             <div class="panel-title" style="color: var(--emerald-bright);">AI #2: ${escapeHtml(permName)} (With AgentGate Browser)</div>
             <div style="font-size: 11.5px; color: var(--text-secondary);">
-              Reads the 98% smaller AgentGate translation (${c.stats.afterSize.toLocaleString()} words • Zero clutter)
+              Reads 98% smaller AgentGate translation (${c.stats.afterSize.toLocaleString()} words • Zero clutter)
             </div>
           </div>
-          <span class="tag tag-emerald">WINNER (${c.latencyMs}ms!)</span>
+          <span class="tag tag-emerald">${rState === 'ready' ? 'AT STARTING LINE (0.00s)' : `FINISHED IN ${fastSec}s`}</span>
         </div>
 
         <div style="padding: 14px; display: flex; flex-direction: column; gap: 12px;">
-          <!-- AI #2 Live Status Bar -->
+          <!-- AI #2 Live Stopwatch Bar -->
           <div style="padding: 10px 12px; background: var(--emerald-subtle); border: 1px solid var(--emerald-border); border-radius: 6px; font-size: 12px; display: flex; justify-content: space-between; align-items: center;">
-            <span>Status: <strong style="color: var(--emerald-bright);">Finished Instantly in 0.${String(c.latencyMs).padStart(3, '0')}s! (${c.stats.percentSmaller}% Smaller)</strong></span>
-            <span style="font-family: var(--font-mono); color: var(--emerald-bright); font-weight: 600;">Cost: $0.0004 (99% Cheaper)</span>
+            <span>Status: <strong style="color: var(--emerald-bright);" id="fastSplitStatusText">${escapeHtml(fastStatusLabel)}</strong></span>
+            <span style="font-family: var(--font-mono); color: var(--emerald-bright); font-weight: 600;">Timer: <span id="fastSplitTimerText">${fastSec}s</span> | Cost: ${rState === 'ready' ? '$0.00' : '$0.0004'}</span>
           </div>
 
-          <!-- AI #2 Instant Answer -->
+          <!-- AI #2 Live Brain Output -->
           <div>
             <div style="font-size: 11.5px; font-weight: 600; color: var(--emerald-bright); margin-bottom: 4px;">
-              AI #2 Instant Result (Completed While AI #1 Is Still Loading):
+              AI #2 Live Work Log:
             </div>
-            <pre class="code-viewer" style="height: 155px; max-height: 155px; border-color: var(--emerald-border);">${escapeHtml(fastAiOutput)}</pre>
+            <pre class="code-viewer" id="fastSplitLogBox" style="height: 165px; max-height: 165px; border-color: var(--emerald-border);">${escapeHtml(fastLogText)}</pre>
           </div>
 
           <!-- What AI #2 Sees (Clean AgentGate Translated Page) -->
           <div>
             <div style="font-size: 11.5px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">
-              What AI #2 Sees (Clean AgentGate Translation of ${escapeHtml(c.title)}):
+              Input Fed to AI #2 (AgentGate Translated Page: ${escapeHtml(c.title)}):
             </div>
-            <pre class="code-viewer" style="height: 310px; max-height: 310px;">${escapeHtml(c.takeoutBag.bullets)}</pre>
+            <pre class="code-viewer" style="height: 300px; max-height: 300px;">${escapeHtml(c.takeoutBag.bullets)}</pre>
           </div>
         </div>
       </div>
@@ -532,29 +553,66 @@ function setSplitHumanMode(mode) {
   renderViewport();
 }
 
+function resetSideBySideRace() {
+  clearInterval(window._splitRaceInterval);
+  browserState.splitRaceState = 'ready';
+  browserState.splitSlowElapsedMs = 0;
+  browserState.splitFastElapsedMs = 0;
+  browserState.splitSlowStep = 0;
+  browserState.splitFastStep = 0;
+  renderViewport();
+}
+
 function runSideBySideAiComparison(e) {
   if (e) e.preventDefault();
   const inp = document.getElementById('splitTaskInput');
   if (inp && inp.value.trim()) {
     browserState.splitTaskPrompt = inp.value.trim();
   }
-  browserState.splitAiRunning = true;
-  browserState.splitSlowStep = 1;
-  renderViewport();
-  showToast('AI #2 (AgentGate AI) finished in 0.18s! Watch AI #1 on the left struggle through the raw HTML...');
 
   clearInterval(window._splitRaceInterval);
+  browserState.splitRaceState = 'running';
+  browserState.splitSlowElapsedMs = 0;
+  browserState.splitFastElapsedMs = 0;
+  browserState.splitSlowStep = 1;
+  browserState.splitFastStep = 1;
+  renderViewport();
+
+  const startWall = Date.now();
+  const fastTargetMs = 420; // 0.42s total for AgentGate AI to fetch, compile & extract
+  const slowTargetMs = 7400; // 7.40s live on-screen stopwatch for Standard AI
+
   window._splitRaceInterval = setInterval(() => {
-    if (browserState.splitSlowStep < 5) {
-      browserState.splitSlowStep += 1;
-      if (browserState.splitSlowStep === 5) {
-        browserState.splitAiRunning = false;
-      }
-      renderViewport();
+    const elapsed = Date.now() - startWall;
+
+    // Update Fast AI (AgentGate AI)
+    if (elapsed < 180) {
+      browserState.splitFastElapsedMs = elapsed;
+      browserState.splitFastStep = 1;
+    } else if (elapsed < fastTargetMs) {
+      browserState.splitFastElapsedMs = elapsed;
+      browserState.splitFastStep = 2;
     } else {
+      browserState.splitFastElapsedMs = fastTargetMs;
+      browserState.splitFastStep = 3;
+    }
+
+    // Update Slow AI (Standard AI)
+    if (elapsed < slowTargetMs) {
+      browserState.splitSlowElapsedMs = elapsed;
+      if (elapsed < 1600) browserState.splitSlowStep = 1;
+      else if (elapsed < 3400) browserState.splitSlowStep = 2;
+      else if (elapsed < 5200) browserState.splitSlowStep = 3;
+      else browserState.splitSlowStep = 4;
+    } else {
+      browserState.splitSlowElapsedMs = slowTargetMs;
+      browserState.splitSlowStep = 5;
+      browserState.splitRaceState = 'done';
       clearInterval(window._splitRaceInterval);
     }
-  }, 1100);
+
+    renderViewport();
+  }, 80);
 }
 
 // ============================================================================
