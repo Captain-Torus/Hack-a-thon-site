@@ -172,7 +172,7 @@ function deductCredits(cost) {
 // Turn a search query or partial domain into a real navigable URL
 function resolveInputToUrl(inputStr, baseUrl = '') {
   const raw = String(inputStr || '').trim();
-  if (!raw) return 'https://books.toscrape.com';
+  if (!raw) return 'https://en.wikipedia.org/wiki/Spider-Man';
 
   // If it's a relative link clicked inside a page, resolve against the tab's current URL
   if (baseUrl && !raw.startsWith('http://') && !raw.startsWith('https://') && !raw.match(/^[a-z0-9.-]+\.(com|org|io|net|edu|gov|dev)(\/|$)/i)) {
@@ -537,7 +537,7 @@ async function seedBrowserTabs() {
   };
   state.tabs.push(blankTab);
 
-  const compiled = await compileUrlToAiSchema('https://books.toscrape.com');
+  const compiled = await compileUrlToAiSchema('https://en.wikipedia.org/wiki/Spider-Man');
   state.tabs.push({
     id: 'tab_' + crypto.randomBytes(3).toString('hex'),
     isBlankNewTab: false,
@@ -549,7 +549,19 @@ async function seedBrowserTabs() {
     compiled
   });
 
-  state.activeTabId = state.tabs[0].id;
+  const qbCompiled = await compileUrlToAiSchema('https://www.qbreader.org/');
+  state.tabs.push({
+    id: 'tab_' + crypto.randomBytes(3).toString('hex'),
+    isBlankNewTab: false,
+    url: qbCompiled.sourceUrl,
+    title: qbCompiled.title.slice(0, 32),
+    history: [qbCompiled.sourceUrl],
+    historyIndex: 0,
+    takeoutFormat: 'bullets',
+    compiled: qbCompiled
+  });
+
+  state.activeTabId = state.tabs[1].id;
   syncPermanentAiFeed('server-startup');
 }
 
@@ -875,7 +887,7 @@ app.post('/api/ai-mission', async (req, res) => {
       triggerCheckoutHold = null
     } = req.body;
 
-    const compiled = await compileUrlToAiSchema(url || 'https://books.toscrape.com');
+    const compiled = await compileUrlToAiSchema(url || 'https://en.wikipedia.org/wiki/Spider-Man');
     if (Array.isArray(customDataItems) && customDataItems.length > 0) {
       compiled.dataItems = customDataItems;
     }

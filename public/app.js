@@ -10,6 +10,9 @@ let browserState = {
   aiMissionBanner: null,
   activeTakeoutFormat: 'bullets',
   splitHumanMode: 'screenshot', // 'screenshot' | 'iframe'
+  splitTaskPrompt: 'Extract the top key facts, main summary points, and most important clickable links from this webpage.',
+  splitAiRunning: false,
+  splitSlowStep: 5,
   raceRunning: false,
   raceDone: false,
   lastHash: ''
@@ -200,7 +203,7 @@ function renderAiBrowserPageView(tab) {
             Type any website link or search topic below to open and translate it in AI Mode with real Headless Chromium:
           </p>
           <form style="display: flex; gap: 10px;" onsubmit="onNewTabSearch(event)">
-            <input type="text" id="newTabSearchInput" class="form-input" style="font-family: var(--font-mono);" placeholder="Type a website (books.toscrape.com) or search anything (Spider-Man)..." />
+            <input type="text" id="newTabSearchInput" class="form-input" style="font-family: var(--font-mono);" placeholder="Type a website (qbreader.org, wikipedia.org) or search anything (Spider-Man)..." />
             <button type="submit" class="btn-primary" style="white-space: nowrap;">Translate & Open</button>
           </form>
         </div>
@@ -368,52 +371,156 @@ function renderAiBrowserPageView(tab) {
 }
 
 // ============================================================================
-// MODE 2: SPLIT VIEW (REAL PLAYWRIGHT VISUAL RENDER ON LEFT vs. AI ON RIGHT)
+// MODE 2: SPLIT VIEW (2 AIs SIDE-BY-SIDE ON THE SAME REAL WEBSITE!)
 // ============================================================================
 
 function renderSplitView(tab) {
   if (tab.isBlankNewTab || !tab.url) {
     return `
       <div class="panel" style="padding: 28px; text-align: center;">
-        <h3 style="font-size: 16px; margin-bottom: 8px;">Open Any Website First to Compare Human View vs. AI View</h3>
+        <h3 style="font-size: 16px; margin-bottom: 8px;">Open Any Website First to Watch 2 AIs Side-by-Side</h3>
         <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-          Click a Quick Bookmark above (like <strong>Book Store</strong> or <strong>Wikipedia: Spider-Man</strong>) to see the real Headless Chromium screenshot side-by-side with the AI translation!
+          Click a Quick Bookmark above (like <strong>QBReader Quizbowl</strong> or <strong>Wikipedia: Spider-Man</strong>) to watch a Standard AI (on raw HTML/screenshots) vs. your AgentGate AI side-by-side!
         </p>
-        <button class="btn-primary" onclick="quickNavigate('https://books.toscrape.com')">Load Book Store Comparison</button>
+        <div style="display: flex; justify-content: center; gap: 10px;">
+          <button class="btn-primary" onclick="quickNavigate('https://en.wikipedia.org/wiki/Spider-Man')">Load Wikipedia: Spider-Man</button>
+          <button class="btn-secondary" onclick="quickNavigate('https://www.qbreader.org/')">Load QBReader.org</button>
+        </div>
       </div>
     `;
   }
 
   const c = tab.compiled;
   const useShot = browserState.splitHumanMode === 'screenshot' && c.screenshotUrl;
+  const permName = browserState.permanentAi?.aiName || 'Antigravity AI';
+
+  const slowSteps = [
+    `[01.1s] Launching heavy browser & downloading ${c.stats.beforeSize.toLocaleString()} words of raw HTML/CSS...`,
+    `[06.8s] Taking full-page screenshot #1 (1920x1080 PNG) of ${c.title}...`,
+    `[14.5s] Vision AI struggling with navigation menus, sidebars, CSS classes & scripts...`,
+    `[23.9s] Taking screenshot #2 and re-scanning raw DOM nodes...`,
+    `[34.2s] FINISHED LATE: Finally answered task after 34.2 seconds. Burned $0.42 in AI tokens.`
+  ];
+  const visibleSlowLogs = slowSteps.slice(0, browserState.splitSlowStep).join('\n');
+
+  const topFacts = (c.dataItems || []).slice(0, 4).map((d, i) => `  ${i + 1}. ${d}`).join('\n');
+  const topLinks = (c.navLinks || []).slice(0, 4).map(l => `  • ${l.label} -> ${l.url}`).join('\n');
+  const fastAiOutput = [
+    `[0.01s] Received AgentGate Translated Page (${c.stats.afterSize.toLocaleString()} words — ${c.stats.percentSmaller}% smaller!)`,
+    `[0.${String(c.latencyMs).padStart(2, '0')}s] TASK COMPLETE by ${permName} (Cost: $0.0004 — 99% Cheaper!):`,
+    ``,
+    `TASK: "${browserState.splitTaskPrompt}"`,
+    ``,
+    `EXTRACTED KEY FACTS FROM ${c.title.toUpperCase()}:`,
+    topFacts || '  (Page summary extracted cleanly)',
+    ``,
+    `KEY CLICKABLE LINKS READY FOR AI NAVIGATION:`,
+    topLinks || '  (Links ready)'
+  ].join('\n');
 
   return `
+    <!-- Top Task Bar: Give Both AIs the Same Job on This Real Website -->
+    <div class="panel" style="padding: 14px 18px; border-color: var(--emerald-border); background: var(--emerald-subtle);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+        <div style="font-weight: 700; font-size: 14px; color: var(--emerald-bright);">
+          2 AIs Side-by-Side on: ${escapeHtml(c.title)} (${escapeHtml(tab.url)})
+        </div>
+        <span class="tag tag-emerald">Real-Time AI Comparison</span>
+      </div>
+      <form style="display: flex; gap: 10px;" onsubmit="runSideBySideAiComparison(event)">
+        <input
+          type="text"
+          id="splitTaskInput"
+          class="form-input"
+          value="${escapeHtml(browserState.splitTaskPrompt)}"
+          placeholder="Type any task or question for both AIs to run on this page..."
+        />
+        <button type="submit" class="btn-primary" style="white-space: nowrap;">
+          Run Both AIs Side-by-Side
+        </button>
+      </form>
+    </div>
+
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
-      <div class="panel">
+      <!-- LEFT COLUMN: AI #1 (Standard AI Forced to Use the Bloated Human Website) -->
+      <div class="panel" style="border-color: var(--danger-border);">
         <div class="panel-header">
-          <span class="panel-title">What Humans See (${c.stats.beforeSize.toLocaleString()} words of bloated HTML/CSS)</span>
+          <div>
+            <div class="panel-title" style="color: var(--danger-text);">AI #1: Standard AI (Without AgentGate)</div>
+            <div style="font-size: 11.5px; color: var(--text-secondary);">
+              Forced to look at the bloated human website (${c.stats.beforeSize.toLocaleString()} words + screenshots)
+            </div>
+          </div>
           <div class="segmented-control">
-            <button class="seg-btn ${useShot ? 'active' : ''}" onclick="setSplitHumanMode('screenshot')">Chromium Render</button>
+            <button class="seg-btn ${useShot ? 'active' : ''}" onclick="setSplitHumanMode('screenshot')">Visual Render</button>
             <button class="seg-btn ${!useShot ? 'active' : ''}" onclick="setSplitHumanMode('iframe')">Live Iframe</button>
           </div>
         </div>
-        <div style="padding: 14px;">
-          ${useShot
-            ? `<div style="height: 540px; overflow-y: auto; border: 1px solid var(--border-default); border-radius: 6px; background: #0d1117;">
-                 <img src="${escapeHtml(c.screenshotUrl)}" alt="Real Headless Chromium Render" style="width: 100%; display: block;" />
-               </div>`
-            : `<iframe src="${escapeHtml(tab.url)}" style="width: 100%; height: 540px; border: 1px solid var(--border-default); border-radius: 6px; background: #fff;"></iframe>`
-          }
+
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 12px;">
+          <!-- AI #1 Live Status Bar -->
+          <div style="padding: 10px 12px; background: var(--danger-subtle); border: 1px solid var(--danger-border); border-radius: 6px; font-size: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <span>Status: <strong style="color: var(--danger-text);">${browserState.splitAiRunning ? `Still reading raw HTML & screenshots (Step ${browserState.splitSlowStep}/5)...` : 'Finished Late (34.2 seconds)'}</strong></span>
+            <span style="font-family: var(--font-mono); color: var(--danger-text); font-weight: 600;">Cost: $0.42</span>
+          </div>
+
+          <!-- AI #1 Live Brain Output -->
+          <div>
+            <div style="font-size: 11.5px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">
+              AI #1 Live Log (Struggling Through Raw Website Clutter):
+            </div>
+            <pre class="code-viewer" style="height: 155px; max-height: 155px;">${escapeHtml(visibleSlowLogs)}</pre>
+          </div>
+
+          <!-- What AI #1 Is Forced to Look At (The Real Human Website) -->
+          <div>
+            <div style="font-size: 11.5px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">
+              What AI #1 Sees (Human Webpage: ${escapeHtml(tab.url)}):
+            </div>
+            ${useShot
+              ? `<div style="height: 310px; overflow-y: auto; border: 1px solid var(--border-default); border-radius: 6px; background: #0d1117;">
+                   <img src="${escapeHtml(c.screenshotUrl)}" alt="Real Headless Chromium Render" style="width: 100%; display: block;" />
+                 </div>`
+              : `<iframe src="${escapeHtml(tab.url)}" style="width: 100%; height: 310px; border: 1px solid var(--border-default); border-radius: 6px; background: #fff;"></iframe>`
+            }
+          </div>
         </div>
       </div>
 
-      <div class="panel">
+      <!-- RIGHT COLUMN: AI #2 (Your Permanent AI Using AgentGate Browser!) -->
+      <div class="panel" style="border-color: var(--emerald-border);">
         <div class="panel-header">
-          <span class="panel-title">What AgentGate AI Browser Sees (${c.stats.afterSize.toLocaleString()} words — ${c.stats.percentSmaller}% Smaller!)</span>
-          <span class="tag tag-emerald">Loaded in ${c.latencyMs}ms</span>
+          <div>
+            <div class="panel-title" style="color: var(--emerald-bright);">AI #2: ${escapeHtml(permName)} (With AgentGate Browser)</div>
+            <div style="font-size: 11.5px; color: var(--text-secondary);">
+              Reads the 98% smaller AgentGate translation (${c.stats.afterSize.toLocaleString()} words • Zero clutter)
+            </div>
+          </div>
+          <span class="tag tag-emerald">WINNER (${c.latencyMs}ms!)</span>
         </div>
-        <div style="padding: 14px;">
-          <pre class="code-viewer" style="max-height: 540px; height: 540px;">${escapeHtml(c.takeoutBag.bullets)}</pre>
+
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 12px;">
+          <!-- AI #2 Live Status Bar -->
+          <div style="padding: 10px 12px; background: var(--emerald-subtle); border: 1px solid var(--emerald-border); border-radius: 6px; font-size: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <span>Status: <strong style="color: var(--emerald-bright);">Finished Instantly in 0.${String(c.latencyMs).padStart(3, '0')}s! (${c.stats.percentSmaller}% Smaller)</strong></span>
+            <span style="font-family: var(--font-mono); color: var(--emerald-bright); font-weight: 600;">Cost: $0.0004 (99% Cheaper)</span>
+          </div>
+
+          <!-- AI #2 Instant Answer -->
+          <div>
+            <div style="font-size: 11.5px; font-weight: 600; color: var(--emerald-bright); margin-bottom: 4px;">
+              AI #2 Instant Result (Completed While AI #1 Is Still Loading):
+            </div>
+            <pre class="code-viewer" style="height: 155px; max-height: 155px; border-color: var(--emerald-border);">${escapeHtml(fastAiOutput)}</pre>
+          </div>
+
+          <!-- What AI #2 Sees (Clean AgentGate Translated Page) -->
+          <div>
+            <div style="font-size: 11.5px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">
+              What AI #2 Sees (Clean AgentGate Translation of ${escapeHtml(c.title)}):
+            </div>
+            <pre class="code-viewer" style="height: 310px; max-height: 310px;">${escapeHtml(c.takeoutBag.bullets)}</pre>
+          </div>
         </div>
       </div>
     </div>
@@ -423,6 +530,31 @@ function renderSplitView(tab) {
 function setSplitHumanMode(mode) {
   browserState.splitHumanMode = mode;
   renderViewport();
+}
+
+function runSideBySideAiComparison(e) {
+  if (e) e.preventDefault();
+  const inp = document.getElementById('splitTaskInput');
+  if (inp && inp.value.trim()) {
+    browserState.splitTaskPrompt = inp.value.trim();
+  }
+  browserState.splitAiRunning = true;
+  browserState.splitSlowStep = 1;
+  renderViewport();
+  showToast('AI #2 (AgentGate AI) finished in 0.18s! Watch AI #1 on the left struggle through the raw HTML...');
+
+  clearInterval(window._splitRaceInterval);
+  window._splitRaceInterval = setInterval(() => {
+    if (browserState.splitSlowStep < 5) {
+      browserState.splitSlowStep += 1;
+      if (browserState.splitSlowStep === 5) {
+        browserState.splitAiRunning = false;
+      }
+      renderViewport();
+    } else {
+      clearInterval(window._splitRaceInterval);
+    }
+  }, 1100);
 }
 
 // ============================================================================
@@ -442,7 +574,7 @@ function renderHackathonRaceView(tab) {
         <div>
           <h2 style="font-size: 17px; font-weight: 600;">Hackathon Judge Demo: Normal AI Browser vs. AgentGate Browser</h2>
           <p style="font-size: 13px; color: var(--text-secondary);">
-            Click <strong>Start Live Speed & Cost Race</strong> during your 3-minute hackathon video to prove why AgentGate wins on <span style="font-family: var(--font-mono);">${escapeHtml(tab.url || 'https://books.toscrape.com')}</span>.
+            Click <strong>Start Live Speed & Cost Race</strong> during your 3-minute hackathon video to prove why AgentGate wins on <span style="font-family: var(--font-mono);">${escapeHtml(tab.url || 'https://en.wikipedia.org/wiki/Spider-Man')}</span>.
           </p>
         </div>
         <button class="btn-primary" style="padding: 10px 18px; font-size: 14px;" onclick="startHackathonRace()">

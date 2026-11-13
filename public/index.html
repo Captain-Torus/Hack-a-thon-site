@@ -88,7 +88,7 @@
             type="text"
             id="addressBarInput"
             class="omni-input"
-            placeholder="Type any website URL (books.toscrape.com) OR search anything (spider man, black holes)..."
+            placeholder="Type any website URL (qbreader.org, wikipedia.org) OR search anything (spider man, black holes)..."
           />
           <button type="submit" class="omni-go-btn" id="omniGoBtn">Translate & Go</button>
         </form>
@@ -96,7 +96,7 @@
         <!-- 3-Mode View Switcher -->
         <div class="segmented-control">
           <button class="seg-btn active" id="modeBtn-ai" onclick="setViewMode('ai')">AI Browser View</button>
-          <button class="seg-btn" id="modeBtn-split" onclick="setViewMode('split')">Split (Human vs AI)</button>
+          <button class="seg-btn" id="modeBtn-split" onclick="setViewMode('split')">Split (2 AIs Side-by-Side)</button>
           <button class="seg-btn" id="modeBtn-race" onclick="setViewMode('race')">Hackathon Race Demo</button>
         </div>
       </div>
@@ -105,11 +105,11 @@
       <div class="bookmarks-strip">
         <div class="bookmark-chips">
           <span style="color: var(--text-muted); font-weight: 600; margin-right: 4px;">Quick Bookmarks:</span>
-          <button class="bookmark-btn" onclick="quickNavigate('https://books.toscrape.com')">Book Store (Click Categories & Books!)</button>
-          <button class="bookmark-btn" onclick="quickNavigate('https://news.ycombinator.com')">Hacker News Live</button>
+          <button class="bookmark-btn" onclick="quickNavigate('https://www.qbreader.org/')">QBReader Quizbowl</button>
           <button class="bookmark-btn" onclick="quickNavigate('https://en.wikipedia.org/wiki/Spider-Man')">Wikipedia: Spider-Man</button>
-          <button class="bookmark-btn" onclick="quickNavigate('https://en.wikipedia.org/wiki/Resonance')">Wikipedia: Resonance</button>
-          <button class="bookmark-btn" onclick="quickNavigate('Quantum computing')">Search: Quantum Computing</button>
+          <button class="bookmark-btn" onclick="quickNavigate('https://news.ycombinator.com')">Hacker News Live</button>
+          <button class="bookmark-btn" onclick="quickNavigate('https://github.com/trending')">GitHub Trending</button>
+          <button class="bookmark-btn" onclick="quickNavigate('https://en.wikipedia.org/wiki/Artificial_intelligence')">Wikipedia: AI</button>
         </div>
         <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 11px;">
           <button class="bookmark-btn" style="border-color: var(--emerald-border); color: var(--emerald-bright);" onclick="openKiroSpecsModal()">

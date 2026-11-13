@@ -2,481 +2,328 @@
   "permanentAiName": "Antigravity AI",
   "pastedAiProfile": "Antigravity AI — Default Permanent Browser Agent (Full Live Access to http://localhost:3456)",
   "autoSyncAllTabs": true,
-  "lastSyncedAt": "5:44:20 PM",
-  "triggerReason": "permanent-ai-mission",
-  "activeTabId": "tab_0807c6",
+  "lastSyncedAt": "8:11:14 PM",
+  "triggerReason": "server-startup",
+  "activeTabId": "tab_c9c4a3",
   "openTabsCount": 3,
   "pendingSafetyBrakeHolds": [],
   "openTabs": [
     {
       "tabNumber": 1,
-      "id": "tab_0807c6",
-      "isActive": true,
-      "isBlankNewTab": false,
-      "title": "QBReader: French History %",
-      "url": "https://www.qbreader.org/db/",
+      "id": "tab_a0808b",
+      "isActive": false,
+      "isBlankNewTab": true,
+      "title": "New Tab",
+      "url": "",
       "stats": {
-        "beforeSize": 15643,
-        "afterSize": 535,
-        "percentSmaller": 96.6
+        "beforeSize": 0,
+        "afterSize": 0,
+        "percentSmaller": 0
       },
-      "takeoutBullets": "PAGE TITLE: QBReader - Database\nURL: https://www.qbreader.org/db/\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. Search the database that powers QB Reader.\n2. Click on a card footer to view a question's stats. Check out the backup page to access the entire database. To copy a question to the clipboard, click on the left side of the header. To collapse a question, click on the right side of the header.\n3. If your answer was parsed incorrectly, please enter what answer you gave below.\n4. Literature 0%-+Min50%Max\n5. History 0%-+Min50%Max\n6. Science 0%-+Min50%Max\n7. Fine Arts 0%-+Min50%Max\n8. Religion 0%-+Min50%Max\n9. Mythology 0%-+Min50%Max\n10. Philosophy 0%-+Min50%Max\n11. Social Science 0%-+Min50%Max\n12. Current Events 0%-+Min50%Max\n13. Geography 0%-+Min50%Max\n14. Other Academic 0%-+Min50%Max\n15. Pop Culture 0%-+Min50%Max\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"QBReader\" -> https://www.qbreader.org/\n• [lnk_2] \"Play\" -> https://www.qbreader.org/play/\n• [lnk_3] \"Multiplayer\" -> https://www.qbreader.org/play/mp/\n• [lnk_4] \"Database\" -> https://www.qbreader.org/db/\n• [lnk_5] \"Search\" -> https://www.qbreader.org/db/\n• [lnk_6] \"Backups\" -> https://www.qbreader.org/db/backups\n• [lnk_7] \"Set List\" -> https://www.qbreader.org/db/set-list/\n• [lnk_8] \"Frequency List\" -> https://www.qbreader.org/db/frequency-list/\n• [lnk_9] \"Geoword\" -> https://www.qbreader.org/play/geoword/\n• [lnk_10] \"Tools\" -> https://www.qbreader.org/tools/\n• [lnk_11] \"API Docs\" -> https://www.qbreader.org/tools/api-docs/\n• [lnk_12] \"MODAQ\" -> https://modaq.github.io/\n• [lnk_13] \"Packet Parser\" -> https://www.qbreader.org/tools/packet-parser/\n• [lnk_14] \"Packet Viewer\" -> https://www.qbreader.org/tools/packet-viewer/\n\n--- ACTION BUTTONS (11 buttons) ---\n• [btn_1] \"Light\" (Safe)\n• [btn_2] \"Night\" (Safe)\n• [btn_3] \"Auto\" (Safe)\n• [btn_4] \"Min\" (Safe)\n• [btn_5] \"50%\" (Safe)\n• [btn_6] \"Max\" (Safe)\n• [btn_7] \"Reset\" (Safe)\n• [btn_8] \"Random\" (Safe)\n• [btn_9] \"Difficulties\" (Safe)\n• [btn_10] \"Categories\" (Safe)\n• [btn_11] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
-      "dataItems": [
-        "TOTAL QBREADER DATABASE: 352,153 total questions (190,173 Tossups + 161,980 Bonuses).",
-        "TOTAL HISTORY CATEGORY: 74,679 History questions (40,807 Tossups + 33,872 Bonuses) — 21.21% of all QBReader questions.",
-        "EUROPEAN HISTORY SUBCATEGORY: 24,826 questions (13,376 Tossups + 11,450 Bonuses) — 33.24% of History.",
-        "1. \"FRENCH\" IN HISTORY (Question + Answer): 5,125 questions (2,416 Tossups + 2,709 Bonuses) = 6.86% of all History (20.64% of European History, 1.46% of entire DB).",
-        "2. \"FRENCH\" OR \"FRANCE\" IN HISTORY (Question + Answer): 8,068 questions (4,102 Tossups + 3,966 Bonuses) = 10.80% of all History (32.50% of European History, 2.29% of entire DB).",
-        "3. STRICT ANSWERLINE ONLY (\"French\" or \"France\" in the Answerline): 1,075 questions (496 Tossups + 579 Bonuses) = 1.44% of all History (0.79% for \"French\" alone: 590 questions)."
-      ],
-      "links": [
-        {
-          "id": "lnk_1",
-          "label": "QBReader",
-          "url": "https://www.qbreader.org/"
-        },
-        {
-          "id": "lnk_2",
-          "label": "Play",
-          "url": "https://www.qbreader.org/play/"
-        },
-        {
-          "id": "lnk_3",
-          "label": "Multiplayer",
-          "url": "https://www.qbreader.org/play/mp/"
-        },
-        {
-          "id": "lnk_4",
-          "label": "Database",
-          "url": "https://www.qbreader.org/db/"
-        },
-        {
-          "id": "lnk_5",
-          "label": "Search",
-          "url": "https://www.qbreader.org/db/"
-        },
-        {
-          "id": "lnk_6",
-          "label": "Backups",
-          "url": "https://www.qbreader.org/db/backups"
-        },
-        {
-          "id": "lnk_7",
-          "label": "Set List",
-          "url": "https://www.qbreader.org/db/set-list/"
-        },
-        {
-          "id": "lnk_8",
-          "label": "Frequency List",
-          "url": "https://www.qbreader.org/db/frequency-list/"
-        },
-        {
-          "id": "lnk_9",
-          "label": "Geoword",
-          "url": "https://www.qbreader.org/play/geoword/"
-        },
-        {
-          "id": "lnk_10",
-          "label": "Tools",
-          "url": "https://www.qbreader.org/tools/"
-        },
-        {
-          "id": "lnk_11",
-          "label": "API Docs",
-          "url": "https://www.qbreader.org/tools/api-docs/"
-        },
-        {
-          "id": "lnk_12",
-          "label": "MODAQ",
-          "url": "https://modaq.github.io/"
-        },
-        {
-          "id": "lnk_13",
-          "label": "Packet Parser",
-          "url": "https://www.qbreader.org/tools/packet-parser/"
-        },
-        {
-          "id": "lnk_14",
-          "label": "Packet Viewer",
-          "url": "https://www.qbreader.org/tools/packet-viewer/"
-        }
-      ],
-      "buttons": [
-        {
-          "id": "btn_1",
-          "label": "Light",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_2",
-          "label": "Night",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_3",
-          "label": "Auto",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_4",
-          "label": "Min",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_5",
-          "label": "50%",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_6",
-          "label": "Max",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_7",
-          "label": "Reset",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_8",
-          "label": "Random",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_9",
-          "label": "Difficulties",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_10",
-          "label": "Categories",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_11",
-          "label": "Complete Instant Checkout & Pay ($49.00)",
-          "target": "https://www.qbreader.org/db/#checkout-pay",
-          "highRisk": true,
-          "riskReason": "Contains payment or checkout action (\"checkout\")"
-        }
-      ]
+      "takeoutBullets": "",
+      "dataItems": [],
+      "links": [],
+      "buttons": []
     },
     {
       "tabNumber": 2,
-      "id": "tab_669352",
-      "isActive": false,
+      "id": "tab_c9c4a3",
+      "isActive": true,
       "isBlankNewTab": false,
-      "title": "QBReader - Database",
-      "url": "https://www.qbreader.org/db/",
+      "title": "Spider-Man - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Spider-Man",
       "stats": {
-        "beforeSize": 15643,
-        "afterSize": 535,
-        "percentSmaller": 96.6
+        "beforeSize": 454162,
+        "afterSize": 1204,
+        "percentSmaller": 99.7
       },
-      "takeoutBullets": "PAGE TITLE: QBReader - Database\nURL: https://www.qbreader.org/db/\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. Search the database that powers QB Reader.\n2. Click on a card footer to view a question's stats. Check out the backup page to access the entire database. To copy a question to the clipboard, click on the left side of the header. To collapse a question, click on the right side of the header.\n3. If your answer was parsed incorrectly, please enter what answer you gave below.\n4. Literature 0%-+Min50%Max\n5. History 0%-+Min50%Max\n6. Science 0%-+Min50%Max\n7. Fine Arts 0%-+Min50%Max\n8. Religion 0%-+Min50%Max\n9. Mythology 0%-+Min50%Max\n10. Philosophy 0%-+Min50%Max\n11. Social Science 0%-+Min50%Max\n12. Current Events 0%-+Min50%Max\n13. Geography 0%-+Min50%Max\n14. Other Academic 0%-+Min50%Max\n15. Pop Culture 0%-+Min50%Max\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"QBReader\" -> https://www.qbreader.org/\n• [lnk_2] \"Play\" -> https://www.qbreader.org/play/\n• [lnk_3] \"Multiplayer\" -> https://www.qbreader.org/play/mp/\n• [lnk_4] \"Database\" -> https://www.qbreader.org/db/\n• [lnk_5] \"Search\" -> https://www.qbreader.org/db/\n• [lnk_6] \"Backups\" -> https://www.qbreader.org/db/backups\n• [lnk_7] \"Set List\" -> https://www.qbreader.org/db/set-list/\n• [lnk_8] \"Frequency List\" -> https://www.qbreader.org/db/frequency-list/\n• [lnk_9] \"Geoword\" -> https://www.qbreader.org/play/geoword/\n• [lnk_10] \"Tools\" -> https://www.qbreader.org/tools/\n• [lnk_11] \"API Docs\" -> https://www.qbreader.org/tools/api-docs/\n• [lnk_12] \"MODAQ\" -> https://modaq.github.io/\n• [lnk_13] \"Packet Parser\" -> https://www.qbreader.org/tools/packet-parser/\n• [lnk_14] \"Packet Viewer\" -> https://www.qbreader.org/tools/packet-viewer/\n\n--- ACTION BUTTONS (11 buttons) ---\n• [btn_1] \"Light\" (Safe)\n• [btn_2] \"Night\" (Safe)\n• [btn_3] \"Auto\" (Safe)\n• [btn_4] \"Min\" (Safe)\n• [btn_5] \"50%\" (Safe)\n• [btn_6] \"Max\" (Safe)\n• [btn_7] \"Reset\" (Safe)\n• [btn_8] \"Random\" (Safe)\n• [btn_9] \"Difficulties\" (Safe)\n• [btn_10] \"Categories\" (Safe)\n• [btn_11] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
+      "takeoutBullets": "PAGE TITLE: Spider-Man - Wikipedia\nURL: https://en.wikipedia.org/wiki/Spider-Man\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. Spider-Man is a superhero in American comic books published by Marvel Comics. Created by writer-editor Stan Lee and artist Steve Ditko, he first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books. ...\n2. Spider-Man's secret identity is Peter Benjamin Parker, who was raised by his Aunt May and Uncle Ben in Queens, New York City, after the death of his parents. Lee, Ditko, and later writers had the character deal with the struggles of adolescence and y...\n3. Marvel has featured Spider-Man in several comic book series, the first and longest-lasting of which is The Amazing Spider-Man. Since his introduction, the main-continuity version of Peter has gone from a high school student to attending college to cu...\n4. Spider-Man has appeared in many forms of media, including several animated TV series, a live-action television series, syndicated newspaper comic strips, and multiple series of films. In live-action films, Spider-Man has been portrayed by Tobey Magui...\n5. In 1962, with the success of the Fantastic Four, Marvel Comics editor and head writer Stan Lee was looking for a new superhero idea. He said the teenage demand for comic books and a character with whom they could identify led to the creation of Spide...\n6. There are many conflicting stories about the inspiration and precise authorship of the various aspects of Spider-Man's appearance and character. In his autobiography, Lee cites the non-superhuman pulp magazine crime fighter the Spider as a great infl...\n7. Although at the time teenage superheroes were usually given names ending with \"boy\", Lee says he chose \"Spider-Man\" because he wanted the character to age as the series progressed, and felt the name \"Spider-Boy\" would have made the character sound in...\n8. Lee required Marvel publisher Martin Goodman's approval for the character. In a 1986 interview, Lee gives his arguments against Goodman's objections. Goodman eventually agreed to a Spider-Man tryout in what Lee, in numerous interviews, recalled as wh...\n9. Lee received Goodman's approval for the name Spider-Man and the \"ordinary teen\" concept and approached artist Jack Kirby. As comics historian Greg Theakston recounts, Kirby told Lee about an unpublished character on which he had collaborated with Joe...\n10. One of the first things I did was to work up a costume. A vital, visual part of the character. I had to know how he looked ... before I did any breakdowns. For example: A clinging power so he wouldn't have hard shoes or boots, a hidden wrist-shooter ...\n11. Although the interior artwork was by Ditko alone, Lee rejected Ditko's cover art and commissioned Kirby to pencil a cover that Ditko inked. As Lee explained in 2010, \"I think I had Jack sketch out a cover for it because I always had a lot of confiden...\n12. Kirby disputed Lee's version of the story and claimed Lee had minimal involvement in the character's creation. According to Kirby, the idea for Spider-Man had originated with Kirby and Joe Simon, who in the 1950s had developed a character called the ...\n13. Virgin cover of Web of Spider-Man #129.1(October 2012), by Mike McKone and Morry Hollowell\n14. Publication information\n15. PublisherMarvel Comics\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"Main page\" -> https://en.wikipedia.org/wiki/Main_Page\n• [lnk_2] \"Contents\" -> https://en.wikipedia.org/wiki/Wikipedia:Contents\n• [lnk_3] \"Current events\" -> https://en.wikipedia.org/wiki/Portal:Current_events\n• [lnk_4] \"Random article\" -> https://en.wikipedia.org/wiki/Special:Random\n• [lnk_5] \"About Wikipedia\" -> https://en.wikipedia.org/wiki/Wikipedia:About\n• [lnk_6] \"Contact us\" -> https://en.wikipedia.org/wiki/Wikipedia:Contact_us\n• [lnk_7] \"Help\" -> https://en.wikipedia.org/wiki/Help:Contents\n• [lnk_8] \"Community portal\" -> https://en.wikipedia.org/wiki/Wikipedia:Community_portal\n• [lnk_9] \"Recent changes\" -> https://en.wikipedia.org/wiki/Special:RecentChanges\n• [lnk_10] \"Upload file\" -> https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard\n• [lnk_11] \"Special pages\" -> https://en.wikipedia.org/wiki/Special:SpecialPages\n• [lnk_12] \"Afrikaans\" -> https://af.wikipedia.org/wiki/Spider-Man\n• [lnk_13] \"አማርኛ\" -> https://am.wikipedia.org/wiki/%E1%88%B5%E1%8D%93%E1%8B%AD%E1%8B%B0%E1%88%AD%E1%88%9B%E1%8A%95\n• [lnk_14] \"Ænglisc\" -> https://ang.wikipedia.org/wiki/Spider-Man\n\n--- ACTION BUTTONS (5 buttons) ---\n• [btn_1] \"Search\" (Safe)\n• [btn_2] \"antisocial\" (SAFETY BRAKE PROTECTED)\n• [btn_3] \"\"Spider-Man Removes Mask at Last\"\" (SAFETY BRAKE PROTECTED)\n• [btn_4] \"the original\" (SAFETY BRAKE PROTECTED)\n• [btn_5] \"115 languages\" (Safe)",
       "dataItems": [
-        "Search the database that powers QB Reader.",
-        "Click on a card footer to view a question's stats. Check out the backup page to access the entire database. To copy a question to the clipboard, click on the left side of the header. To collapse a question, click on the right side of the header.",
-        "If your answer was parsed incorrectly, please enter what answer you gave below.",
-        "Literature 0%-+Min50%Max",
-        "History 0%-+Min50%Max",
-        "Science 0%-+Min50%Max",
-        "Fine Arts 0%-+Min50%Max",
-        "Religion 0%-+Min50%Max",
-        "Mythology 0%-+Min50%Max",
-        "Philosophy 0%-+Min50%Max",
-        "Social Science 0%-+Min50%Max",
-        "Current Events 0%-+Min50%Max",
-        "Geography 0%-+Min50%Max",
-        "Other Academic 0%-+Min50%Max",
-        "Pop Culture 0%-+Min50%Max"
+        "Spider-Man is a superhero in American comic books published by Marvel Comics. Created by writer-editor Stan Lee and artist Steve Ditko, he first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books. ...",
+        "Spider-Man's secret identity is Peter Benjamin Parker, who was raised by his Aunt May and Uncle Ben in Queens, New York City, after the death of his parents. Lee, Ditko, and later writers had the character deal with the struggles of adolescence and y...",
+        "Marvel has featured Spider-Man in several comic book series, the first and longest-lasting of which is The Amazing Spider-Man. Since his introduction, the main-continuity version of Peter has gone from a high school student to attending college to cu...",
+        "Spider-Man has appeared in many forms of media, including several animated TV series, a live-action television series, syndicated newspaper comic strips, and multiple series of films. In live-action films, Spider-Man has been portrayed by Tobey Magui...",
+        "In 1962, with the success of the Fantastic Four, Marvel Comics editor and head writer Stan Lee was looking for a new superhero idea. He said the teenage demand for comic books and a character with whom they could identify led to the creation of Spide...",
+        "There are many conflicting stories about the inspiration and precise authorship of the various aspects of Spider-Man's appearance and character. In his autobiography, Lee cites the non-superhuman pulp magazine crime fighter the Spider as a great infl...",
+        "Although at the time teenage superheroes were usually given names ending with \"boy\", Lee says he chose \"Spider-Man\" because he wanted the character to age as the series progressed, and felt the name \"Spider-Boy\" would have made the character sound in...",
+        "Lee required Marvel publisher Martin Goodman's approval for the character. In a 1986 interview, Lee gives his arguments against Goodman's objections. Goodman eventually agreed to a Spider-Man tryout in what Lee, in numerous interviews, recalled as wh...",
+        "Lee received Goodman's approval for the name Spider-Man and the \"ordinary teen\" concept and approached artist Jack Kirby. As comics historian Greg Theakston recounts, Kirby told Lee about an unpublished character on which he had collaborated with Joe...",
+        "One of the first things I did was to work up a costume. A vital, visual part of the character. I had to know how he looked ... before I did any breakdowns. For example: A clinging power so he wouldn't have hard shoes or boots, a hidden wrist-shooter ...",
+        "Although the interior artwork was by Ditko alone, Lee rejected Ditko's cover art and commissioned Kirby to pencil a cover that Ditko inked. As Lee explained in 2010, \"I think I had Jack sketch out a cover for it because I always had a lot of confiden...",
+        "Kirby disputed Lee's version of the story and claimed Lee had minimal involvement in the character's creation. According to Kirby, the idea for Spider-Man had originated with Kirby and Joe Simon, who in the 1950s had developed a character called the ...",
+        "Virgin cover of Web of Spider-Man #129.1(October 2012), by Mike McKone and Morry Hollowell",
+        "Publication information",
+        "PublisherMarvel Comics"
       ],
       "links": [
         {
           "id": "lnk_1",
-          "label": "QBReader",
-          "url": "https://www.qbreader.org/"
+          "label": "Main page",
+          "url": "https://en.wikipedia.org/wiki/Main_Page"
         },
         {
           "id": "lnk_2",
-          "label": "Play",
-          "url": "https://www.qbreader.org/play/"
+          "label": "Contents",
+          "url": "https://en.wikipedia.org/wiki/Wikipedia:Contents"
         },
         {
           "id": "lnk_3",
-          "label": "Multiplayer",
-          "url": "https://www.qbreader.org/play/mp/"
+          "label": "Current events",
+          "url": "https://en.wikipedia.org/wiki/Portal:Current_events"
         },
         {
           "id": "lnk_4",
-          "label": "Database",
-          "url": "https://www.qbreader.org/db/"
+          "label": "Random article",
+          "url": "https://en.wikipedia.org/wiki/Special:Random"
         },
         {
           "id": "lnk_5",
-          "label": "Search",
-          "url": "https://www.qbreader.org/db/"
+          "label": "About Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Wikipedia:About"
         },
         {
           "id": "lnk_6",
-          "label": "Backups",
-          "url": "https://www.qbreader.org/db/backups"
+          "label": "Contact us",
+          "url": "https://en.wikipedia.org/wiki/Wikipedia:Contact_us"
         },
         {
           "id": "lnk_7",
-          "label": "Set List",
-          "url": "https://www.qbreader.org/db/set-list/"
+          "label": "Help",
+          "url": "https://en.wikipedia.org/wiki/Help:Contents"
         },
         {
           "id": "lnk_8",
-          "label": "Frequency List",
-          "url": "https://www.qbreader.org/db/frequency-list/"
+          "label": "Community portal",
+          "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal"
         },
         {
           "id": "lnk_9",
-          "label": "Geoword",
-          "url": "https://www.qbreader.org/play/geoword/"
+          "label": "Recent changes",
+          "url": "https://en.wikipedia.org/wiki/Special:RecentChanges"
         },
         {
           "id": "lnk_10",
-          "label": "Tools",
-          "url": "https://www.qbreader.org/tools/"
+          "label": "Upload file",
+          "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard"
         },
         {
           "id": "lnk_11",
-          "label": "API Docs",
-          "url": "https://www.qbreader.org/tools/api-docs/"
+          "label": "Special pages",
+          "url": "https://en.wikipedia.org/wiki/Special:SpecialPages"
         },
         {
           "id": "lnk_12",
-          "label": "MODAQ",
-          "url": "https://modaq.github.io/"
+          "label": "Afrikaans",
+          "url": "https://af.wikipedia.org/wiki/Spider-Man"
         },
         {
           "id": "lnk_13",
-          "label": "Packet Parser",
-          "url": "https://www.qbreader.org/tools/packet-parser/"
+          "label": "አማርኛ",
+          "url": "https://am.wikipedia.org/wiki/%E1%88%B5%E1%8D%93%E1%8B%AD%E1%8B%B0%E1%88%AD%E1%88%9B%E1%8A%95"
         },
         {
           "id": "lnk_14",
-          "label": "Packet Viewer",
-          "url": "https://www.qbreader.org/tools/packet-viewer/"
+          "label": "Ænglisc",
+          "url": "https://ang.wikipedia.org/wiki/Spider-Man"
         }
       ],
       "buttons": [
         {
           "id": "btn_1",
-          "label": "Light",
-          "target": "https://www.qbreader.org/db/",
+          "label": "Search",
+          "target": "https://en.wikipedia.org/wiki/Special:Search",
           "highRisk": false,
           "riskReason": "Safe to click"
         },
         {
           "id": "btn_2",
-          "label": "Night",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
+          "label": "antisocial",
+          "target": "https://en.wikipedia.org/wiki/Antisocial_personality_disorder",
+          "highRisk": true,
+          "riskReason": "Contains payment or delete action (\"order\")"
         },
         {
           "id": "btn_3",
-          "label": "Auto",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
+          "label": "\"Spider-Man Removes Mask at Last\"",
+          "target": "http://news.bbc.co.uk/1/hi/entertainment/5084326.stm",
+          "highRisk": true,
+          "riskReason": "Contains payment or delete action (\"remove\")"
         },
         {
           "id": "btn_4",
-          "label": "Min",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
+          "label": "the original",
+          "target": "https://www.syfy.com/syfywire/spider-man-into-the-spider-verses-real-hero-are-ben-day-dots",
+          "highRisk": true,
+          "riskReason": "Contains payment or delete action (\"wire\")"
         },
         {
           "id": "btn_5",
-          "label": "50%",
-          "target": "https://www.qbreader.org/db/",
+          "label": "115 languages",
+          "target": "https://en.wikipedia.org/wiki/Spider-Man",
           "highRisk": false,
           "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_6",
-          "label": "Max",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_7",
-          "label": "Reset",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_8",
-          "label": "Random",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_9",
-          "label": "Difficulties",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_10",
-          "label": "Categories",
-          "target": "https://www.qbreader.org/db/",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_11",
-          "label": "Complete Instant Checkout & Pay ($49.00)",
-          "target": "https://www.qbreader.org/db/#checkout-pay",
-          "highRisk": true,
-          "riskReason": "Contains payment or checkout action (\"checkout\")"
         }
       ]
     },
     {
       "tabNumber": 3,
-      "id": "tab_9b5992",
+      "id": "tab_e0fcb5",
       "isActive": false,
       "isBlankNewTab": false,
-      "title": "All products | Books to Scrape -",
-      "url": "https://books.toscrape.com/",
+      "title": "QBReader - Home",
+      "url": "https://www.qbreader.org/",
       "stats": {
-        "beforeSize": 12751,
-        "afterSize": 633,
-        "percentSmaller": 95
+        "beforeSize": 2829,
+        "afterSize": 615,
+        "percentSmaller": 82
       },
-      "takeoutBullets": "PAGE TITLE: All products | Books to Scrape - Sandbox\nURL: https://books.toscrape.com/\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. A Light in the ... £51.77 In stock Add to basket\n2. Tipping the Velvet £53.74 In stock Add to basket\n3. Soumission £50.10 In stock Add to basket\n4. Sharp Objects £47.82 In stock Add to basket\n5. Sapiens: A Brief History ... £54.23 In stock Add to basket\n6. The Requiem Red £22.65 In stock Add to basket\n7. The Dirty Little Secrets ... £33.34 In stock Add to basket\n8. The Coming Woman: A ... £17.93 In stock Add to basket\n9. The Boys in the ... £22.60 In stock Add to basket\n10. The Black Maria £52.15 In stock Add to basket\n11. Starving Hearts (Triangular Trade ... £13.99 In stock Add to basket\n12. Shakespeare's Sonnets £20.66 In stock Add to basket\n13. Set Me Free £17.46 In stock Add to basket\n14. Scott Pilgrim's Precious Little ... £52.29 In stock Add to basket\n15. Rip it Up and ... £35.02 In stock Add to basket\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"Books to Scrape\" -> https://books.toscrape.com/index.html\n• [lnk_2] \"Home\" -> https://books.toscrape.com/index.html\n• [lnk_3] \"Books\" -> https://books.toscrape.com/catalogue/category/books_1/index.html\n• [lnk_4] \"Travel\" -> https://books.toscrape.com/catalogue/category/books/travel_2/index.html\n• [lnk_5] \"Mystery\" -> https://books.toscrape.com/catalogue/category/books/mystery_3/index.html\n• [lnk_6] \"Historical Fiction\" -> https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html\n• [lnk_7] \"Sequential Art\" -> https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html\n• [lnk_8] \"Classics\" -> https://books.toscrape.com/catalogue/category/books/classics_6/index.html\n• [lnk_9] \"Philosophy\" -> https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html\n• [lnk_10] \"Romance\" -> https://books.toscrape.com/catalogue/category/books/romance_8/index.html\n• [lnk_11] \"Womens Fiction\" -> https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html\n• [lnk_12] \"Fiction\" -> https://books.toscrape.com/catalogue/category/books/fiction_10/index.html\n• [lnk_13] \"Childrens\" -> https://books.toscrape.com/catalogue/category/books/childrens_11/index.html\n• [lnk_14] \"Religion\" -> https://books.toscrape.com/catalogue/category/books/religion_12/index.html\n\n--- ACTION BUTTONS (2 buttons) ---\n• [btn_1] \"Add to basket\" (Safe)\n• [btn_2] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
+      "takeoutBullets": "PAGE TITLE: QBReader - Home\nURL: https://www.qbreader.org/\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (11 items) ---\n1. QB Reader is a text-based quizbowl question reader. Play some questions on your own:\n2. Or, join a multiplayer room to play against other people:\n3. New to QB Reader? Check out tips and instructions:\n4. QB Reader comes with a searchable database of questions which have been downloaded and parsed from https://quizbowlpackets.com/.\n5. Answerlines have been aggregated into frequency lists by category.\n6. The questions are parsed using the Python or JavaScript packet parser.\n7. Sign up for an account to track your stats, and play geoword. If you already have an account, login here. To find out more about what an account can do, check out the about page.\n8. Most features of QB Reader can be accessed through the API. You can also use the python wrapper to interact with the API.\n9. You can also directly view the Github source code and the answer checking code as an npm package.\n10. Sign up to play SEPTEMBER on geoword, an open-level pop music question set, today! The asynchronous tournament will start in November!\n11. Feature of the Day:\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"QBReader\" -> https://www.qbreader.org/\n• [lnk_2] \"Play\" -> https://www.qbreader.org/play/\n• [lnk_3] \"Multiplayer\" -> https://www.qbreader.org/play/mp/\n• [lnk_4] \"Database\" -> https://www.qbreader.org/db/\n• [lnk_5] \"Search\" -> https://www.qbreader.org/db/\n• [lnk_6] \"Backups\" -> https://www.qbreader.org/db/backups\n• [lnk_7] \"Set List\" -> https://www.qbreader.org/db/set-list/\n• [lnk_8] \"Frequency List\" -> https://www.qbreader.org/db/frequency-list/\n• [lnk_9] \"Geoword\" -> https://www.qbreader.org/play/geoword/\n• [lnk_10] \"Tools\" -> https://www.qbreader.org/tools/\n• [lnk_11] \"API Docs\" -> https://www.qbreader.org/tools/api-docs/\n• [lnk_12] \"MODAQ\" -> https://modaq.github.io/\n• [lnk_13] \"Packet Parser\" -> https://www.qbreader.org/tools/packet-parser/\n• [lnk_14] \"Packet Viewer\" -> https://www.qbreader.org/tools/packet-viewer/\n\n--- ACTION BUTTONS (9 buttons) ---\n• [btn_1] \"Light\" (Safe)\n• [btn_2] \"Night\" (Safe)\n• [btn_3] \"Auto\" (Safe)\n• [btn_4] \"Tossups\" (Safe)\n• [btn_5] \"Bonuses\" (Safe)\n• [btn_6] \"Tips & Instructions\" (Safe)\n• [btn_7] \"Join the official Discord.\" (Safe)\n• [btn_8] \"Adjust site-wide settings.\" (Safe)\n• [btn_9] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
       "dataItems": [
-        "A Light in the ... £51.77 In stock Add to basket",
-        "Tipping the Velvet £53.74 In stock Add to basket",
-        "Soumission £50.10 In stock Add to basket",
-        "Sharp Objects £47.82 In stock Add to basket",
-        "Sapiens: A Brief History ... £54.23 In stock Add to basket",
-        "The Requiem Red £22.65 In stock Add to basket",
-        "The Dirty Little Secrets ... £33.34 In stock Add to basket",
-        "The Coming Woman: A ... £17.93 In stock Add to basket",
-        "The Boys in the ... £22.60 In stock Add to basket",
-        "The Black Maria £52.15 In stock Add to basket",
-        "Starving Hearts (Triangular Trade ... £13.99 In stock Add to basket",
-        "Shakespeare's Sonnets £20.66 In stock Add to basket",
-        "Set Me Free £17.46 In stock Add to basket",
-        "Scott Pilgrim's Precious Little ... £52.29 In stock Add to basket",
-        "Rip it Up and ... £35.02 In stock Add to basket"
+        "QB Reader is a text-based quizbowl question reader. Play some questions on your own:",
+        "Or, join a multiplayer room to play against other people:",
+        "New to QB Reader? Check out tips and instructions:",
+        "QB Reader comes with a searchable database of questions which have been downloaded and parsed from https://quizbowlpackets.com/.",
+        "Answerlines have been aggregated into frequency lists by category.",
+        "The questions are parsed using the Python or JavaScript packet parser.",
+        "Sign up for an account to track your stats, and play geoword. If you already have an account, login here. To find out more about what an account can do, check out the about page.",
+        "Most features of QB Reader can be accessed through the API. You can also use the python wrapper to interact with the API.",
+        "You can also directly view the Github source code and the answer checking code as an npm package.",
+        "Sign up to play SEPTEMBER on geoword, an open-level pop music question set, today! The asynchronous tournament will start in November!",
+        "Feature of the Day:"
       ],
       "links": [
         {
           "id": "lnk_1",
-          "label": "Books to Scrape",
-          "url": "https://books.toscrape.com/index.html"
+          "label": "QBReader",
+          "url": "https://www.qbreader.org/"
         },
         {
           "id": "lnk_2",
-          "label": "Home",
-          "url": "https://books.toscrape.com/index.html"
+          "label": "Play",
+          "url": "https://www.qbreader.org/play/"
         },
         {
           "id": "lnk_3",
-          "label": "Books",
-          "url": "https://books.toscrape.com/catalogue/category/books_1/index.html"
+          "label": "Multiplayer",
+          "url": "https://www.qbreader.org/play/mp/"
         },
         {
           "id": "lnk_4",
-          "label": "Travel",
-          "url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+          "label": "Database",
+          "url": "https://www.qbreader.org/db/"
         },
         {
           "id": "lnk_5",
-          "label": "Mystery",
-          "url": "https://books.toscrape.com/catalogue/category/books/mystery_3/index.html"
+          "label": "Search",
+          "url": "https://www.qbreader.org/db/"
         },
         {
           "id": "lnk_6",
-          "label": "Historical Fiction",
-          "url": "https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html"
+          "label": "Backups",
+          "url": "https://www.qbreader.org/db/backups"
         },
         {
           "id": "lnk_7",
-          "label": "Sequential Art",
-          "url": "https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html"
+          "label": "Set List",
+          "url": "https://www.qbreader.org/db/set-list/"
         },
         {
           "id": "lnk_8",
-          "label": "Classics",
-          "url": "https://books.toscrape.com/catalogue/category/books/classics_6/index.html"
+          "label": "Frequency List",
+          "url": "https://www.qbreader.org/db/frequency-list/"
         },
         {
           "id": "lnk_9",
-          "label": "Philosophy",
-          "url": "https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html"
+          "label": "Geoword",
+          "url": "https://www.qbreader.org/play/geoword/"
         },
         {
           "id": "lnk_10",
-          "label": "Romance",
-          "url": "https://books.toscrape.com/catalogue/category/books/romance_8/index.html"
+          "label": "Tools",
+          "url": "https://www.qbreader.org/tools/"
         },
         {
           "id": "lnk_11",
-          "label": "Womens Fiction",
-          "url": "https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html"
+          "label": "API Docs",
+          "url": "https://www.qbreader.org/tools/api-docs/"
         },
         {
           "id": "lnk_12",
-          "label": "Fiction",
-          "url": "https://books.toscrape.com/catalogue/category/books/fiction_10/index.html"
+          "label": "MODAQ",
+          "url": "https://modaq.github.io/"
         },
         {
           "id": "lnk_13",
-          "label": "Childrens",
-          "url": "https://books.toscrape.com/catalogue/category/books/childrens_11/index.html"
+          "label": "Packet Parser",
+          "url": "https://www.qbreader.org/tools/packet-parser/"
         },
         {
           "id": "lnk_14",
-          "label": "Religion",
-          "url": "https://books.toscrape.com/catalogue/category/books/religion_12/index.html"
+          "label": "Packet Viewer",
+          "url": "https://www.qbreader.org/tools/packet-viewer/"
         }
       ],
       "buttons": [
         {
           "id": "btn_1",
-          "label": "Add to basket",
-          "target": "https://books.toscrape.com/",
+          "label": "Light",
+          "target": "https://www.qbreader.org/",
           "highRisk": false,
           "riskReason": "Safe to click"
         },
         {
           "id": "btn_2",
+          "label": "Night",
+          "target": "https://www.qbreader.org/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_3",
+          "label": "Auto",
+          "target": "https://www.qbreader.org/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_4",
+          "label": "Tossups",
+          "target": "https://www.qbreader.org/play/tossups/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_5",
+          "label": "Bonuses",
+          "target": "https://www.qbreader.org/play/bonuses/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_6",
+          "label": "Tips & Instructions",
+          "target": "https://www.qbreader.org/about/tips",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_7",
+          "label": "Join the official Discord.",
+          "target": "https://discord.gg/5ue7MucTGQ",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_8",
+          "label": "Adjust site-wide settings.",
+          "target": "https://www.qbreader.org/settings/",
+          "highRisk": false,
+          "riskReason": "Safe to click"
+        },
+        {
+          "id": "btn_9",
           "label": "Complete Instant Checkout & Pay ($49.00)",
-          "target": "https://books.toscrape.com/#checkout-pay",
+          "target": "https://www.qbreader.org/#checkout-pay",
           "highRisk": true,
           "riskReason": "Contains payment or checkout action (\"checkout\")"
         }
