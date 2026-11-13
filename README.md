@@ -40,8 +40,8 @@ This repository includes our full Kiro spec-driven development suite in [`/.kiro
 ## Quick Start (Run Locally in 30 Seconds)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/agentgate-browser.git
-cd agentgate-browser
+git clone https://github.com/Captain-Torus/Hack-a-thon-site.git
+cd Hack-a-thon-site
 npm install
 npx playwright install chromium
 npm start
