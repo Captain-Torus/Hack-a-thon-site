@@ -1,5 +1,7 @@
 # AgentGate Browser — The AI-Native Headless Web Browser & UI Compiler
 
+> 📄 **[Click Here to Open the Full Demo Video Script & Submission Guide (`HACKATHON_SUBMISSION_GUIDE.md`)](./HACKATHON_SUBMISSION_GUIDE.md)**
+
 **AgentGate Browser** is a headless Chromium AI web browser that translates bloated human websites (100,000+ words of HTML, CSS, trackers, and layout divs) into a **98% smaller, structured AI-friendly interface** in milliseconds—complete with a **Permanent Default AI Bridge** and a deterministic **Safety Brake** for financial/destructive actions.
 
 ---
