@@ -387,7 +387,7 @@ function renderSplitView(tab) {
         </p>
         <div style="display: flex; justify-content: center; gap: 10px;">
           <button class="btn-primary" onclick="quickNavigate('https://stripe.com/pricing')">Load Stripe Pricing (-99.7%)</button>
-          <button class="btn-secondary" onclick="quickNavigate('https://github.com/trending')">Load GitHub Trending (-99.3%)</button>
+          <button class="btn-secondary" onclick="quickNavigate('https://kiroween.devpost.com/')">Load Kiroween Hackathon Page (-99.1%)</button>
         </div>
       </div>
     `;

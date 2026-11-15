@@ -6,6 +6,6 @@
   "allowTabControl": true,
   "liveFeedUrl": "http://localhost:3456/api/permanent-ai/feed",
   "controlUrl": "http://localhost:3456/api/ai-mission",
-  "lastSyncedAt": "5:42:03 PM",
-  "savedAt": "2026-11-12T22:42:03.586Z"
+  "lastSyncedAt": "1:12:25 PM",
+  "savedAt": "2026-11-15T18:12:25.581Z"
 }

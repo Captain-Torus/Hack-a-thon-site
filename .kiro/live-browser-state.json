@@ -2,15 +2,15 @@
   "permanentAiName": "Antigravity AI",
   "pastedAiProfile": "Antigravity AI — Default Permanent Browser Agent (Full Live Access to http://localhost:3456)",
   "autoSyncAllTabs": true,
-  "lastSyncedAt": "12:35:15 PM",
-  "triggerReason": "server-startup",
-  "activeTabId": "tab_315173",
-  "openTabsCount": 3,
+  "lastSyncedAt": "1:15:16 PM",
+  "triggerReason": "close-tab",
+  "activeTabId": "tab_681c11",
+  "openTabsCount": 2,
   "pendingSafetyBrakeHolds": [],
   "openTabs": [
     {
       "tabNumber": 1,
-      "id": "tab_42ddcc",
+      "id": "tab_506452",
       "isActive": false,
       "isBlankNewTab": true,
       "title": "New Tab",
@@ -27,17 +27,17 @@
     },
     {
       "tabNumber": 2,
-      "id": "tab_315173",
+      "id": "tab_681c11",
       "isActive": true,
       "isBlankNewTab": false,
       "title": "Pricing & Fees",
       "url": "https://stripe.com/pricing",
       "stats": {
-        "beforeSize": 244161,
-        "afterSize": 668,
+        "beforeSize": 244907,
+        "afterSize": 656,
         "percentSmaller": 99.7
       },
-      "takeoutBullets": "PAGE TITLE: Pricing & Fees\nURL: https://stripe.com/pricing\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. We're here to discuss your business needs.\n2. Wallet, stablecoin issuing, and card infrastructure\n3. Wallet, stablecoin issuing, and card infrastructure\n4. per successful transaction for domestic cards\n5. Accept payments around the world with cardholder support in 195+ countries.\n6. Process charges and display prices in your customer’s preferred currency to increase conversion.\n7. From Alipay to iDEAL, seamlessly support popular payment methods.\n8. Accept payments globally through a single integration.\n9. Detect and block fraud using machine learning trained on data across millions of companies.\n10. Adapt faster to the latest trends with Radar’s machine learning.\n11. Get started with zero code thanks to Stripe’s built-in fraud protection.\n12. Monitor your fraud performance with advanced analytics and alerting.\n13. Standard pricing for all products\n14. How are payment fees calculated?\n15. Will I be charged tax?\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"Pricing\" -> https://stripe.com/pricing\n• [lnk_2] \"See all products Explore our full product catalog\" -> https://stripe.com/products\n• [lnk_3] \"Authorization Boost Acceptance optimizations\" -> https://stripe.com/authorization-boost\n• [lnk_4] \"Financial Connections Linked financial account data\" -> https://stripe.com/financial-connections\n• [lnk_5] \"Invoicing One-time or recurring\" -> https://stripe.com/invoicing\n• [lnk_6] \"Tax Sales tax & VAT automation\" -> https://stripe.com/tax\n• [lnk_7] \"Revenue Recognition Accounting automation\" -> https://stripe.com/revenue-recognition\n• [lnk_8] \"Stripe Sigma Custom reports\" -> https://stripe.com/sigma\n• [lnk_9] \"Data Pipeline Data sync\" -> https://stripe.com/data-pipeline\n• [lnk_10] \"Treasury Business finances\" -> https://stripe.com/treasury\n• [lnk_11] \"Capital Business financing\" -> https://stripe.com/capital\n• [lnk_12] \"Crypto Wallet, stablecoin issuing, and card infrastructure\" -> https://stripe.com/use-cases/crypto\n• [lnk_13] \"Capital for platforms Customer financing\" -> https://stripe.com/capital/platforms\n• [lnk_14] \"Treasury for platforms Embedded financial services\" -> https://stripe.com/treasury/platforms\n\n--- ACTION BUTTONS (10 buttons) ---\n• [btn_1] \"Chat now with sales\" (Safe)\n• [btn_2] \"Products\" (Safe)\n• [btn_3] \"Solutions\" (Safe)\n• [btn_4] \"Developers\" (Safe)\n• [btn_5] \"Resources\" (Safe)\n• [btn_6] \"Sign in\" (Safe)\n• [btn_7] \"Dashboard\" (Safe)\n• [btn_8] \"Contact sales\" (Safe)\n• [btn_9] \"Back\" (Safe)\n• [btn_10] \"Payments Online payments\" (SAFETY BRAKE PROTECTED)",
+      "takeoutBullets": "PAGE TITLE: Pricing & Fees\nURL: https://stripe.com/pricing\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. We're here to discuss your business needs.\n2. Wallet, stablecoin issuing, and card infrastructure\n3. Wallet, stablecoin issuing, and card infrastructure\n4. per successful transaction for domestic cards\n5. Accept payments around the world with cardholder support in 195+ countries.\n6. Process charges and display prices in your customer’s preferred currency to increase conversion.\n7. From Alipay to iDEAL, seamlessly support popular payment methods.\n8. Accept payments globally through a single integration.\n9. Detect and block fraud using machine learning trained on data across millions of companies.\n10. Adapt faster to the latest trends with Radar’s machine learning.\n11. Get started with zero code thanks to Stripe’s built-in fraud protection.\n12. Monitor your fraud performance with advanced analytics and alerting.\n13. Standard pricing for all products\n14. How are payment fees calculated?\n15. Will I be charged tax?\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"Pricing\" -> https://stripe.com/pricing\n• [lnk_2] \"Guide me\" -> https://stripe.com/personalize\n• [lnk_3] \"Get recommendations Tell us about your business\" -> https://stripe.com/personalize\n• [lnk_4] \"See all products Explore our full product catalog\" -> https://stripe.com/products\n• [lnk_5] \"Authorization Boost Acceptance optimizations\" -> https://stripe.com/authorization-boost\n• [lnk_6] \"Financial Connections Linked financial account data\" -> https://stripe.com/financial-connections\n• [lnk_7] \"Invoicing One-time or recurring\" -> https://stripe.com/invoicing\n• [lnk_8] \"Tax Sales tax & VAT automation\" -> https://stripe.com/tax\n• [lnk_9] \"Revenue Recognition Accounting automation\" -> https://stripe.com/revenue-recognition\n• [lnk_10] \"Stripe Sigma Custom reports\" -> https://stripe.com/sigma\n• [lnk_11] \"Data Pipeline Data sync\" -> https://stripe.com/data-pipeline\n• [lnk_12] \"Treasury Business finances\" -> https://stripe.com/treasury\n• [lnk_13] \"Capital Business financing\" -> https://stripe.com/capital\n• [lnk_14] \"Crypto Wallet, stablecoin issuing, and card infrastructure\" -> https://stripe.com/use-cases/crypto\n\n--- ACTION BUTTONS (10 buttons) ---\n• [btn_1] \"Chat now with sales\" (Safe)\n• [btn_2] \"Products\" (Safe)\n• [btn_3] \"Solutions\" (Safe)\n• [btn_4] \"Developers\" (Safe)\n• [btn_5] \"Resources\" (Safe)\n• [btn_6] \"Sign in\" (Safe)\n• [btn_7] \"Dashboard\" (Safe)\n• [btn_8] \"Contact sales\" (Safe)\n• [btn_9] \"Back\" (Safe)\n• [btn_10] \"Payments Online payments\" (SAFETY BRAKE PROTECTED)",
       "dataItems": [
         "We're here to discuss your business needs.",
         "Wallet, stablecoin issuing, and card infrastructure",
@@ -63,68 +63,68 @@
         },
         {
           "id": "lnk_2",
+          "label": "Guide me",
+          "url": "https://stripe.com/personalize"
+        },
+        {
+          "id": "lnk_3",
+          "label": "Get recommendations Tell us about your business",
+          "url": "https://stripe.com/personalize"
+        },
+        {
+          "id": "lnk_4",
           "label": "See all products Explore our full product catalog",
           "url": "https://stripe.com/products"
         },
         {
-          "id": "lnk_3",
+          "id": "lnk_5",
           "label": "Authorization Boost Acceptance optimizations",
           "url": "https://stripe.com/authorization-boost"
         },
         {
-          "id": "lnk_4",
+          "id": "lnk_6",
           "label": "Financial Connections Linked financial account data",
           "url": "https://stripe.com/financial-connections"
         },
         {
-          "id": "lnk_5",
+          "id": "lnk_7",
           "label": "Invoicing One-time or recurring",
           "url": "https://stripe.com/invoicing"
         },
         {
-          "id": "lnk_6",
+          "id": "lnk_8",
           "label": "Tax Sales tax & VAT automation",
           "url": "https://stripe.com/tax"
         },
         {
-          "id": "lnk_7",
+          "id": "lnk_9",
           "label": "Revenue Recognition Accounting automation",
           "url": "https://stripe.com/revenue-recognition"
         },
         {
-          "id": "lnk_8",
+          "id": "lnk_10",
           "label": "Stripe Sigma Custom reports",
           "url": "https://stripe.com/sigma"
         },
         {
-          "id": "lnk_9",
+          "id": "lnk_11",
           "label": "Data Pipeline Data sync",
           "url": "https://stripe.com/data-pipeline"
         },
         {
-          "id": "lnk_10",
+          "id": "lnk_12",
           "label": "Treasury Business finances",
           "url": "https://stripe.com/treasury"
         },
         {
-          "id": "lnk_11",
+          "id": "lnk_13",
           "label": "Capital Business financing",
           "url": "https://stripe.com/capital"
         },
         {
-          "id": "lnk_12",
+          "id": "lnk_14",
           "label": "Crypto Wallet, stablecoin issuing, and card infrastructure",
           "url": "https://stripe.com/use-cases/crypto"
-        },
-        {
-          "id": "lnk_13",
-          "label": "Capital for platforms Customer financing",
-          "url": "https://stripe.com/capital/platforms"
-        },
-        {
-          "id": "lnk_14",
-          "label": "Treasury for platforms Embedded financial services",
-          "url": "https://stripe.com/treasury/platforms"
         }
       ],
       "buttons": [
@@ -197,188 +197,6 @@
           "target": "https://stripe.com/payments",
           "highRisk": true,
           "riskReason": "Contains payment or delete action (\"pay\")"
-        }
-      ]
-    },
-    {
-      "tabNumber": 3,
-      "id": "tab_c0756b",
-      "isActive": false,
-      "isBlankNewTab": false,
-      "title": "Trending repositories on GitHub ",
-      "url": "https://github.com/trending",
-      "stats": {
-        "beforeSize": 138365,
-        "afterSize": 989,
-        "percentSmaller": 99.3
-      },
-      "takeoutBullets": "PAGE TITLE: Trending repositories on GitHub today · GitHub\nURL: https://github.com/trending\nENGINE: Playwright Headless Chromium\nSAFETY BRAKE: ON\n\n--- PAGE SUMMARY & DATA (15 items) ---\n1. See what the GitHub community is most excited about today.\n2. Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.\n3. AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.\n4. A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.\n5. The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.\n6. Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anth...\n7. Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.\n8. A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.\n9. Keep your coding agent up to date with the latest web best practices\n10. Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.\n11. Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.\n12. dream-num / univer\n13. Star ag-ui-protocol / ag-ui AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications. TypeScript 17,683 1,789 Built by 393 stars today\n14. google-labs-code / stitch-skills\n15. backnotprop / plannotator\n\n--- CLICKABLE PAGE LINKS (14 links) ---\n• [lnk_1] \"GitHubRepository hosting, code review, and collaboration\" -> https://github.com/platform\n• [lnk_2] \"ActionsCI/CD and automation\" -> https://github.com/features/actions\n• [lnk_3] \"Code QualityQuality analysis, fixes, and enforcement\" -> https://github.com/features/code-quality\n• [lnk_4] \"CodespacesCloud development environments\" -> https://github.com/features/codespaces\n• [lnk_5] \"Code SecurityVulnerability detection and remediation\" -> https://github.com/security/advanced-security/code-security\n• [lnk_6] \"Secret ProtectionSecret scanning and leak prevention\" -> https://github.com/security/advanced-security/secret-protection\n• [lnk_7] \"All Features\" -> https://github.com/features\n• [lnk_8] \"Documentation\" -> https://docs.github.com/en\n• [lnk_9] \"Training\" -> https://learn.github.com/skills\n• [lnk_10] \"Certifications\" -> https://learn.github.com/credentials\n• [lnk_11] \"Build with Copilot\" -> https://github.com/features/ai\n• [lnk_12] \"Customize Copilot\" -> https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-copilot-overview\n• [lnk_13] \"Integrations\" -> https://github.com/marketplace\n• [lnk_14] \"Trending repos\" -> https://github.com/trending\n\n--- ACTION BUTTONS (11 buttons) ---\n• [btn_1] \"Sign in\" (Safe)\n• [btn_2] \"Products\" (Safe)\n• [btn_3] \"Developers\" (Safe)\n• [btn_4] \"Businesses\" (Safe)\n• [btn_5] \"Resources\" (Safe)\n• [btn_6] \"Search/\" (Safe)\n• [btn_7] \"Sign up\" (Safe)\n• [btn_8] \"Star\" (Safe)\n• [btn_9] \"Sponsor\" (Safe)\n• [btn_10] \"Manage cookies\" (Safe)\n• [btn_11] \"Complete Instant Checkout & Pay ($49.00)\" (SAFETY BRAKE PROTECTED)",
-      "dataItems": [
-        "See what the GitHub community is most excited about today.",
-        "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-        "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-        "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-        "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anth...",
-        "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
-        "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-        "Keep your coding agent up to date with the latest web best practices",
-        "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-        "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
-        "dream-num / univer",
-        "Star ag-ui-protocol / ag-ui AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications. TypeScript 17,683 1,789 Built by 393 stars today",
-        "google-labs-code / stitch-skills",
-        "backnotprop / plannotator"
-      ],
-      "links": [
-        {
-          "id": "lnk_1",
-          "label": "GitHubRepository hosting, code review, and collaboration",
-          "url": "https://github.com/platform"
-        },
-        {
-          "id": "lnk_2",
-          "label": "ActionsCI/CD and automation",
-          "url": "https://github.com/features/actions"
-        },
-        {
-          "id": "lnk_3",
-          "label": "Code QualityQuality analysis, fixes, and enforcement",
-          "url": "https://github.com/features/code-quality"
-        },
-        {
-          "id": "lnk_4",
-          "label": "CodespacesCloud development environments",
-          "url": "https://github.com/features/codespaces"
-        },
-        {
-          "id": "lnk_5",
-          "label": "Code SecurityVulnerability detection and remediation",
-          "url": "https://github.com/security/advanced-security/code-security"
-        },
-        {
-          "id": "lnk_6",
-          "label": "Secret ProtectionSecret scanning and leak prevention",
-          "url": "https://github.com/security/advanced-security/secret-protection"
-        },
-        {
-          "id": "lnk_7",
-          "label": "All Features",
-          "url": "https://github.com/features"
-        },
-        {
-          "id": "lnk_8",
-          "label": "Documentation",
-          "url": "https://docs.github.com/en"
-        },
-        {
-          "id": "lnk_9",
-          "label": "Training",
-          "url": "https://learn.github.com/skills"
-        },
-        {
-          "id": "lnk_10",
-          "label": "Certifications",
-          "url": "https://learn.github.com/credentials"
-        },
-        {
-          "id": "lnk_11",
-          "label": "Build with Copilot",
-          "url": "https://github.com/features/ai"
-        },
-        {
-          "id": "lnk_12",
-          "label": "Customize Copilot",
-          "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-copilot-overview"
-        },
-        {
-          "id": "lnk_13",
-          "label": "Integrations",
-          "url": "https://github.com/marketplace"
-        },
-        {
-          "id": "lnk_14",
-          "label": "Trending repos",
-          "url": "https://github.com/trending"
-        }
-      ],
-      "buttons": [
-        {
-          "id": "btn_1",
-          "label": "Sign in",
-          "target": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Ftrending",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_2",
-          "label": "Products",
-          "target": "https://github.com/trending",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_3",
-          "label": "Developers",
-          "target": "https://github.com/trending",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_4",
-          "label": "Businesses",
-          "target": "https://github.com/trending",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_5",
-          "label": "Resources",
-          "target": "https://github.com/trending",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_6",
-          "label": "Search/",
-          "target": "https://github.com/trending",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_7",
-          "label": "Sign up",
-          "target": "https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Ftrending&source=header",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_8",
-          "label": "Star",
-          "target": "https://github.com/login?return_to=%2Fdream-num%2Funiver",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_9",
-          "label": "Sponsor",
-          "target": "https://github.com/sponsors/elementalsouls",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_10",
-          "label": "Manage cookies",
-          "target": "https://github.com/trending",
-          "highRisk": false,
-          "riskReason": "Safe to click"
-        },
-        {
-          "id": "btn_11",
-          "label": "Complete Instant Checkout & Pay ($49.00)",
-          "target": "https://github.com/trending#checkout-pay",
-          "highRisk": true,
-          "riskReason": "Contains payment or checkout action (\"checkout\")"
         }
       ]
     }

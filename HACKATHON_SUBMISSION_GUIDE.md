@@ -32,9 +32,9 @@
 
 **"You paste in your AI once right here and click 'Save as Permanent Default AI'. From that moment on, every tab you open automatically syncs to your AI in the background using our Kiro Agent Hooks."**
 
-👉 **[CLICK: the `GitHub Trending (-99.3%)` or `Kiroween Hackathon Page (-99.1%)` bookmark]**
+👉 **[CLICK: the `Kiroween Hackathon Page (-99.1%)` bookmark]**
 
-**"Look how fast it translates GitHub Trending and even the live Kiroween Hackathon page itself! Our Headless Chromium engine loads the real website, removes 100% of the clutter, and gives you and your AI a clean summary, clickable links that translate the next page, and an AI Takeout Bag in Simple List, Code Data, or Spreadsheet format."**
+**"Look how fast it translates the live Kiroween Hackathon page itself! Our Headless Chromium engine loads the real website, removes 100% of the clutter, and gives you and your AI a clean summary, clickable links that translate the next page, and an AI Takeout Bag in Simple List, Code Data, or Spreadsheet format."**
 
 ---
 

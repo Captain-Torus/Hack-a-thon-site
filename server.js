@@ -549,16 +549,16 @@ async function seedBrowserTabs() {
     compiled
   });
 
-  const ghCompiled = await compileUrlToAiSchema('https://github.com/trending');
+  const kwCompiled = await compileUrlToAiSchema('https://kiroween.devpost.com/');
   state.tabs.push({
     id: 'tab_' + crypto.randomBytes(3).toString('hex'),
     isBlankNewTab: false,
-    url: ghCompiled.sourceUrl,
-    title: ghCompiled.title.slice(0, 32),
-    history: [ghCompiled.sourceUrl],
+    url: kwCompiled.sourceUrl,
+    title: kwCompiled.title.slice(0, 32),
+    history: [kwCompiled.sourceUrl],
     historyIndex: 0,
     takeoutFormat: 'bullets',
-    compiled: ghCompiled
+    compiled: kwCompiled
   });
 
   state.activeTabId = state.tabs[1].id;
