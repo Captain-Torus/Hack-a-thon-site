@@ -206,7 +206,7 @@ function renderAiBrowserPageView(tab) {
             Type any website link or search topic below to open and translate it in AI Mode with real Headless Chromium:
           </p>
           <form style="display: flex; gap: 10px;" onsubmit="onNewTabSearch(event)">
-            <input type="text" id="newTabSearchInput" class="form-input" style="font-family: var(--font-mono);" placeholder="Type a website (qbreader.org, wikipedia.org) or search anything (Spider-Man)..." />
+            <input type="text" id="newTabSearchInput" class="form-input" style="font-family: var(--font-mono);" placeholder="Type a website (stripe.com/pricing, github.com/trending, kiroween.devpost.com)..." />
             <button type="submit" class="btn-primary" style="white-space: nowrap;">Translate & Open</button>
           </form>
         </div>
@@ -386,8 +386,8 @@ function renderSplitView(tab) {
           Click a Quick Bookmark above (like <strong>QBReader Quizbowl</strong> or <strong>Wikipedia: Spider-Man</strong>) to put both AIs at the 0.00s starting line!
         </p>
         <div style="display: flex; justify-content: center; gap: 10px;">
-          <button class="btn-primary" onclick="quickNavigate('https://en.wikipedia.org/wiki/Spider-Man')">Load Wikipedia: Spider-Man</button>
-          <button class="btn-secondary" onclick="quickNavigate('https://www.qbreader.org/')">Load QBReader.org</button>
+          <button class="btn-primary" onclick="quickNavigate('https://stripe.com/pricing')">Load Stripe Pricing (-99.7%)</button>
+          <button class="btn-secondary" onclick="quickNavigate('https://github.com/trending')">Load GitHub Trending (-99.3%)</button>
         </div>
       </div>
     `;

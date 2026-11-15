@@ -172,7 +172,7 @@ function deductCredits(cost) {
 // Turn a search query or partial domain into a real navigable URL
 function resolveInputToUrl(inputStr, baseUrl = '') {
   const raw = String(inputStr || '').trim();
-  if (!raw) return 'https://en.wikipedia.org/wiki/Spider-Man';
+  if (!raw) return 'https://stripe.com/pricing';
 
   // If it's a relative link clicked inside a page, resolve against the tab's current URL
   if (baseUrl && !raw.startsWith('http://') && !raw.startsWith('https://') && !raw.match(/^[a-z0-9.-]+\.(com|org|io|net|edu|gov|dev)(\/|$)/i)) {
@@ -537,7 +537,7 @@ async function seedBrowserTabs() {
   };
   state.tabs.push(blankTab);
 
-  const compiled = await compileUrlToAiSchema('https://en.wikipedia.org/wiki/Spider-Man');
+  const compiled = await compileUrlToAiSchema('https://stripe.com/pricing');
   state.tabs.push({
     id: 'tab_' + crypto.randomBytes(3).toString('hex'),
     isBlankNewTab: false,
@@ -549,16 +549,16 @@ async function seedBrowserTabs() {
     compiled
   });
 
-  const qbCompiled = await compileUrlToAiSchema('https://www.qbreader.org/');
+  const ghCompiled = await compileUrlToAiSchema('https://github.com/trending');
   state.tabs.push({
     id: 'tab_' + crypto.randomBytes(3).toString('hex'),
     isBlankNewTab: false,
-    url: qbCompiled.sourceUrl,
-    title: qbCompiled.title.slice(0, 32),
-    history: [qbCompiled.sourceUrl],
+    url: ghCompiled.sourceUrl,
+    title: ghCompiled.title.slice(0, 32),
+    history: [ghCompiled.sourceUrl],
     historyIndex: 0,
     takeoutFormat: 'bullets',
-    compiled: qbCompiled
+    compiled: ghCompiled
   });
 
   state.activeTabId = state.tabs[1].id;
