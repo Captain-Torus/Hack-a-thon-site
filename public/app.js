@@ -199,16 +199,33 @@ function renderAiBrowserPageView(tab) {
   if (tab.isBlankNewTab || !tab.url) {
     return `
       <div style="max-width: 720px; margin: 28px auto; width: 100%; display: flex; flex-direction: column; gap: 20px;">
-        <!-- Box 1: Browse or Search Yourself -->
+        <!-- Box 1: Browse or Search Yourself (Works on ANY Website!) -->
         <div class="panel" style="padding: 26px;">
-          <h2 style="font-size: 18px; font-weight: 600; margin-bottom: 6px;">New Browser Tab</h2>
-          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-            Type any website link or search topic below to open and translate it in AI Mode with real Headless Chromium:
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+            <h2 style="font-size: 18px; font-weight: 600;">Translate Any Website on the Internet for AI</h2>
+            <span class="tag tag-emerald">Universal Web Translator</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 14px;">
+            Type <strong>any website URL or search topic</strong> below—from airline flight booking and online stores to company dashboards and research pages:
           </p>
-          <form style="display: flex; gap: 10px;" onsubmit="onNewTabSearch(event)">
-            <input type="text" id="newTabSearchInput" class="form-input" style="font-family: var(--font-mono);" placeholder="Type a website (stripe.com/pricing, github.com/trending, kiroween.devpost.com)..." />
+          <form style="display: flex; gap: 10px; margin-bottom: 14px;" onsubmit="onNewTabSearch(event)">
+            <input type="text" id="newTabSearchInput" class="form-input" style="font-family: var(--font-mono);" placeholder="Type any website (kayak.com, stripe.com/pricing, wikipedia.org) or search anything..." />
             <button type="submit" class="btn-primary" style="white-space: nowrap;">Translate & Open</button>
           </form>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; font-size: 12px;">
+            <div style="padding: 10px 12px; background: var(--bg-canvas); border: 1px solid var(--border-default); border-radius: 6px;">
+              <strong style="color: var(--emerald-bright); display: block; margin-bottom: 2px;">Flight & Travel Booking</strong>
+              <span style="color: var(--text-secondary);">Compare flights & hotels fast; Safety Brake holds final ticket checkout.</span>
+            </div>
+            <div style="padding: 10px 12px; background: var(--bg-canvas); border: 1px solid var(--border-default); border-radius: 6px;">
+              <strong style="color: var(--emerald-bright); display: block; margin-bottom: 2px;">Shopping & Price Checks</strong>
+              <span style="color: var(--text-secondary);">Scan product specs & prices across multiple tabs in milliseconds.</span>
+            </div>
+            <div style="padding: 10px 12px; background: var(--bg-canvas); border: 1px solid var(--border-default); border-radius: 6px;">
+              <strong style="color: var(--emerald-bright); display: block; margin-bottom: 2px;">Research & SaaS Docs</strong>
+              <span style="color: var(--text-secondary);">Turn massive docs, news, or dashboards into clean AI Takeout Bags.</span>
+            </div>
+          </div>
         </div>
 
         <!-- Box 2: Your Permanent Default AI (Paste Once -> Always Connected to Every Tab!) -->
